@@ -34,6 +34,16 @@ Hugging Face Spaces was ruled out because free Spaces go to sleep and the build 
    - Optional guards: `DAILY_TOKEN_CAP`, `RATE_LIMIT_PER_MIN`
 4. **Settings → Networking → Generate domain**. On the first start, the API downloads the data into the volume, which takes about a minute. After that, `/api/health` shows `ok`.
 
+## 2b. API on AWS EC2 (alternative to Railway)
+
+1. EC2 → **Launch instance**: Ubuntu Server 24.04, a 4 GB type (t3.medium, or c7i-flex.large on a Free-plan account), region Mumbai (ap-south-1). Choose **Proceed without a key pair**. Allow SSH, HTTP and HTTPS from the internet. Set storage to **30 GB**.
+2. Open the instance, then **Connect → EC2 Instance Connect → Connect**, and run:
+   ```bash
+   curl -fsSL https://raw.githubusercontent.com/aadityabaghel25-netizen/courtroomai/main/deploy/aws/setup.sh | sudo bash
+   ```
+   Paste the Token Factory and Tavily keys when asked; the input is hidden. The script ends by printing the HTTPS URL of the API.
+3. Do not **stop** the instance: its public IP, and with it the URL, would change. Set a budget alert in AWS Budgets.
+
 ## 3. Website on Vercel
 
 1. vercel.com, then **Add New → Project**, and import the repo.
