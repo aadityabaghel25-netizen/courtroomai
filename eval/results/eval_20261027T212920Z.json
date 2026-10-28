@@ -1,0 +1,726 @@
+{
+  "timestamp": "2026-10-27T21:29:20.605698+00:00",
+  "git_sha": "b90ca92",
+  "split": "dev",
+  "n_cases": 9,
+  "models": {
+    "nano": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "super": "nvidia/nemotron-3-super-120b-a12b",
+    "ultra": "nvidia/Nemotron-3-Ultra-550b-a55b"
+  },
+  "abstain_threshold_used": -6.9635,
+  "abstain_threshold_tuned_on_dev": {
+    "threshold": -0.9018,
+    "dev_accuracy": 0.778,
+    "n": 9
+  },
+  "metrics": {
+    "fabricated_citation_catch_rate_brief_verifier_on": {
+      "k": 9,
+      "n": 9,
+      "pct": 100.0,
+      "wilson95": [
+        0.7008,
+        1.0
+      ]
+    },
+    "fabricated_citation_shown_brief_verifier_off": {
+      "k": 9,
+      "n": 9,
+      "pct": 100.0,
+      "wilson95": [
+        0.7008,
+        1.0
+      ]
+    },
+    "fabricated_citation_catch_rate_audit": {
+      "k": 9,
+      "n": 9,
+      "pct": 100.0,
+      "wilson95": [
+        0.7008,
+        1.0
+      ]
+    },
+    "audit_real_citation_resolved": {
+      "k": 9,
+      "n": 9,
+      "pct": 100.0,
+      "wilson95": [
+        0.7008,
+        1.0
+      ]
+    },
+    "audit_accuracy_per_citation": {
+      "k": 18,
+      "n": 18,
+      "pct": 100.0,
+      "wilson95": [
+        0.8241,
+        1.0
+      ]
+    },
+    "unsupported_claims_shown_verifier_off": {
+      "k": 31,
+      "n": 63,
+      "pct": 49.2,
+      "wilson95": [
+        0.3727,
+        0.6124
+      ]
+    },
+    "unsupported_claims_shown_verifier_on": {
+      "k": 0,
+      "n": 32,
+      "pct": 0.0,
+      "wilson95": [
+        0.0,
+        0.1072
+      ]
+    },
+    "narrative_leakage_final_output": {
+      "sentences_with_unknown_entities": 0,
+      "cases": 9
+    },
+    "lint_drops_verifier_off": 37,
+    "lint_drops_verifier_on": 0,
+    "precedent_claims_passed": {
+      "k": 19,
+      "n": 28,
+      "pct": 67.9,
+      "wilson95": [
+        0.4934,
+        0.8207
+      ]
+    },
+    "precedent_claims_rejected_or_unverified": {
+      "k": 9,
+      "n": 28,
+      "pct": 32.1,
+      "wilson95": [
+        0.1793,
+        0.5066
+      ]
+    },
+    "false_rejection_rate": "needs hand labels (see human_check CSV)",
+    "context_precision_at_k_topic_labels": 0.583,
+    "good_law_cases_with_web_results": {
+      "k": 10,
+      "n": 13,
+      "pct": 76.9,
+      "wilson95": [
+        0.4974,
+        0.9182
+      ]
+    },
+    "median_latency_s_per_brief": 59.5,
+    "median_tokens_per_brief": 30780,
+    "abstained_cases": 0,
+    "errored_cases": 0
+  },
+  "cases": [
+    {
+      "id": "E01",
+      "split": "dev",
+      "category": "murder IPC 302",
+      "top_rerank": 4.4328,
+      "retrieved": [
+        "12459013",
+        "127568675",
+        "127568675",
+        "12459013",
+        "127568675",
+        "127568675"
+      ],
+      "context_precision": 0.0,
+      "any_relevant_retrieved": false,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 7,
+      "off_unsupported_shown": 2,
+      "off_lint_drops": 4,
+      "on_shown": 5,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 3,
+      "precedent_status": {
+        "passed": 3,
+        "weak": 0,
+        "failed": 0,
+        "unverified": 0
+      },
+      "good_law_with_results": 1,
+      "good_law_searched": 1,
+      "latency_s": 81.1,
+      "tokens": 22689,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P1",
+          "text": "Section 34 does not create a separate offence; it only imposes joint liability when there is a shared intention to commit the crime and each accused takes part in furthering that intention.",
+          "case_id": "127568675",
+          "title": "Sushil Arora vs State on 8 February, 2017",
+          "quote": "It is well settled that Section 34 of the Penal Code does not create a distinct offence: it only lays down the principle of joint criminal liability. The necessary conditions for the application of Section 34 of the Code are common intention to commit an offence and participation by all the accused in doing act or acts in furtherance of that common intention.",
+          "judge_quote": "9. ... It is well settled that Section 34 of the Penal Code does not create a distinct offence: it only lays down the principle of joint criminal liability. The necessary conditions for the application of Section 34 of the Code are common intention to commit an offence and participation by all the accused in doing act or acts in furtherance of that common intention."
+        },
+        {
+          "claim_id": "P2",
+          "text": "Being present at the scene by itself does not establish guilt; the prosecution must show that the accused shared a mutual purpose and actually took part in the criminal act, supported by reliable evidence.",
+          "case_id": "127568675",
+          "title": "Sushil Arora vs State on 8 February, 2017",
+          "quote": " Section 34 has been enacted on the principle of joint liability in the doing of a criminal act. The section is only a rule of evidence and does not create a substantive offence. The distinctive feature of the section is the element of participation in action.",
+          "judge_quote": "Section 34 IPC is completely inapplicable and cannot be invoked inasmuch as the prosecution failed to establish the first essential condition of any common intention between all the appellants for invocation of Section 34 of the IPC. The prosecution has also not established the second essential requirement of a participatory act, overt or covert on the part of these two appellants."
+        },
+        {
+          "claim_id": "P3",
+          "text": "The core of Section 34 liability is a shared intention among the actors to bring about the criminal result.",
+          "case_id": "127568675",
+          "title": "Sushil Arora vs State on 8 February, 2017",
+          "quote": "Section 34 IPC embodies the principle of joint liability in the doing of a criminal act and essence of that liability is the existence of common intention.",
+          "judge_quote": "Section 34 IPC embodies the principle of joint liability in the doing of a criminal act and essence of that liability is the existence of common intention."
+        }
+      ]
+    },
+    {
+      "id": "E02",
+      "split": "dev",
+      "category": "murder IPC 302",
+      "top_rerank": 7.0913,
+      "retrieved": [
+        "12459013",
+        "88795064",
+        "1202145",
+        "1452368",
+        "12459013",
+        "51856830"
+      ],
+      "context_precision": 0.5,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 7,
+      "off_unsupported_shown": 3,
+      "off_lint_drops": 4,
+      "on_shown": 4,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 3,
+      "precedent_status": {
+        "passed": 2,
+        "weak": 0,
+        "failed": 0,
+        "unverified": 1
+      },
+      "good_law_with_results": 2,
+      "good_law_searched": 2,
+      "latency_s": 45.4,
+      "tokens": 28465,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P1",
+          "text": "Culpable homicide that does not amount to murder is punishable under Section 304 IPC, which provides for lesser penalties than murder.",
+          "case_id": "88795064",
+          "title": "Raval Shaileshbhai Rameshbhai ... vs State Of Gujarat on 17 February, 2026",
+          "quote": "Section 304 deals with cases not covered by Section 302 and it divides the offence into two distinct classes, that is, (a) those in which the death is intentionally caused; and (b) those in which the death is caused unintentionally but knowingly.",
+          "judge_quote": "Section 304 deals with cases not covered by Section 302 and it divides the offence into two distinct classes, that is, (a) those in which the death is intentionally caused; and (b) those in which the death is caused unintentionally but knowingly. In the former case the sentence of imprisonment is compulsory and the maximum sentence admissible is imprisonment for life. In the latter case, imprisonment is only optional, and the maximum sentence only extends to imprisonment for 10 years."
+        },
+        {
+          "claim_id": "P2",
+          "text": "A charge under Section 302 read with Section 149 can be altered to Section 302 read with Section 34 only when the prosecution proves a common intention among all participants; otherwise liability should be restricted to those who actually committed the act.",
+          "case_id": "1202145",
+          "title": "Murugan vs State on 20 September, 2006",
+          "quote": "A charge framed under Section 302 r/w.149 IPC could be modified under Section 302 r/w.34 IPC , provided, it is shown a criminal act was done by several persons, in furtherance of the common intention of all, concluding each of such person is liable for that act in the same manner if it were done by him alone.",
+          "judge_quote": "A charge framed under Section 302 r/w.149 IPC could be modified under Section 302 r/w.34 IPC , provided, it is shown a criminal act was done by several persons, in furtherance of the common intention of all, concluding each of such person is liable for that act in the same manner if it were done by him alone."
+        }
+      ]
+    },
+    {
+      "id": "E03",
+      "split": "dev",
+      "category": "murder IPC 302",
+      "top_rerank": 4.046,
+      "retrieved": [
+        "12459013",
+        "1202145",
+        "127568675",
+        "12459013",
+        "12459013",
+        "127568675"
+      ],
+      "context_precision": 0.0,
+      "any_relevant_retrieved": false,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 6,
+      "off_unsupported_shown": 6,
+      "off_lint_drops": 3,
+      "on_shown": 0,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 2,
+      "precedent_status": {
+        "passed": 0,
+        "weak": 0,
+        "failed": 0,
+        "unverified": 2
+      },
+      "good_law_with_results": 0,
+      "good_law_searched": 0,
+      "latency_s": 66.9,
+      "tokens": 30780,
+      "failed_llm_calls": 0,
+      "passed_precedents": []
+    },
+    {
+      "id": "E07",
+      "split": "dev",
+      "category": "rape IPC 376",
+      "top_rerank": 3.7765,
+      "retrieved": [
+        "18498179",
+        "26266533",
+        "96356448",
+        "45056617",
+        "376047",
+        "26266533"
+      ],
+      "context_precision": 1.0,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 7,
+      "off_unsupported_shown": 5,
+      "off_lint_drops": 4,
+      "on_shown": 2,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 3,
+      "precedent_status": {
+        "passed": 1,
+        "weak": 0,
+        "failed": 2,
+        "unverified": 0
+      },
+      "good_law_with_results": 1,
+      "good_law_searched": 1,
+      "latency_s": 98.4,
+      "tokens": 40741,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P2",
+          "text": "Courts can impose a sentence shorter than the statutory minimum if they find adequate and special reasons and state them in the judgment.",
+          "case_id": "376047",
+          "title": "T.K. Gopal @ Gopi C vs State Of Karnataka on 5 May, 2000",
+          "quote": "The proviso to this Section, however, gives a discretion to the court to award a sentence of less than 10 years for adequate and special reasons which have to be mentioned in the judgment.",
+          "judge_quote": "The proviso to this Section, however, gives a discretion to the court to award a sentence of less than 10 years for adequate and special reasons which have to be mentioned in the judgment."
+        }
+      ]
+    },
+    {
+      "id": "E10",
+      "split": "dev",
+      "category": "cheating IPC 420",
+      "top_rerank": 6.9739,
+      "retrieved": [
+        "7248905",
+        "5286035",
+        "5286035",
+        "62122590",
+        "5286035",
+        "86563873"
+      ],
+      "context_precision": 0.6666666666666666,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 8,
+      "off_unsupported_shown": 1,
+      "off_lint_drops": 5,
+      "on_shown": 7,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 4,
+      "precedent_status": {
+        "passed": 4,
+        "weak": 0,
+        "failed": 0,
+        "unverified": 0
+      },
+      "good_law_with_results": 2,
+      "good_law_searched": 3,
+      "latency_s": 55.3,
+      "tokens": 33375,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P1",
+          "text": "Repossession under contractual rights does not amount to criminal breach of trust or cheating.",
+          "case_id": "7248905",
+          "title": "Alpeshkumar Kirtibhai Raval vs State Of Gujarat on 3 November, 2025",
+          "quote": "The petitioner's act of repossessing the vehicle, in exercise of the contractual authority vested under the hypothecation agreement, cannot, by any stretch of legal imagination, be construed as constituting the offences punishable under Sections 406 or 420 of the IPC .",
+          "judge_quote": "The petitioner's act of repossessing the vehicle, in exercise of the contractual authority vested under the hypothecation agreement, cannot, by any stretch of legal imagination, be construed as constituting the offences punishable under Sections 406 or 420 of the IPC ."
+        },
+        {
+          "claim_id": "P2",
+          "text": "Punishment under Section 406 applies only after establishing criminal breach of trust under Section 405.",
+          "case_id": "5286035",
+          "title": "Monishankar Hazra And Anr vs State Of Haryana And Another on 16 March, 2022",
+          "quote": "Section 406 IPC only provides for punishment of offence under Section 405 and will come into play only once the offence of criminal breach of trust is made out.",
+          "judge_quote": "Section 406 IPC only provides for punishment of offence under Section 405 and will come into play only once the offence of criminal breach of trust is made out."
+        },
+        {
+          "claim_id": "P3",
+          "text": "Absence of deception and inducement to deliver property negates cheating offense under Section 420.",
+          "case_id": "5286035",
+          "title": "Monishankar Hazra And Anr vs State Of Haryana And Another on 16 March, 2022",
+          "quote": "It is not the case of respondent no.2 that the petitioners had deceived the complainant either fraudulently or dishonestly and had induced him to deliver any property to any person and such act or omission has caused any damage or harm to respondent no.2.",
+          "judge_quote": "it had been observed by the Hon'ble Supreme Court that offence under Section 420 IPC would not be made out as it was not the case of the complainant therein that any of the accused tried to deceive him by making false or misleading representation or by any other action or omission, nor it was the case of the complainant therein that the accused persons made any fraudulent or dishonest inducement to deliver any property."
+        },
+        {
+          "claim_id": "P4",
+          "text": "A finding of criminal breach of trust precludes a simultaneous finding of cheating under the same facts.",
+          "case_id": "86563873",
+          "title": "Sushree Snehal vs The State Of Madhya Pradesh on 16 May, 2025",
+          "quote": "law in the mind of the police as well as the courts below, that if it is a case of the complainant that offence of criminal breach of trust as defined under Section 405 of IPC, punishable under Section 406 of IPC, is committed by the accused, then in the same breath it cannot be said that the accused has also committed the offence of cheating as defined and explained in Section 415 of the IPC, punishable under Section 420 of the IPC.",
+          "judge_quote": "We may only say, with a view to clear a serious misconception of law in the mind of the police as well as the courts below, that if it is a case of the complainant that offence of criminal breach of trust as defined under Section 405 of IPC, punishable under Section 406 of IPC, is committed by the accused, then in the same breath it cannot be said that the accused has also committed the offence of cheating as defined and explained in Section 415 of the IPC, punishable under Section 420 of the IPC."
+        }
+      ]
+    },
+    {
+      "id": "E11",
+      "split": "dev",
+      "category": "cheating IPC 420",
+      "top_rerank": 7.1645,
+      "retrieved": [
+        "62122590",
+        "62122590",
+        "38768527",
+        "86563873",
+        "124093355",
+        "8238533"
+      ],
+      "context_precision": 0.5249999999999999,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 7,
+      "off_unsupported_shown": 4,
+      "off_lint_drops": 4,
+      "on_shown": 3,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 3,
+      "precedent_status": {
+        "passed": 2,
+        "weak": 0,
+        "failed": 0,
+        "unverified": 1
+      },
+      "good_law_with_results": 1,
+      "good_law_searched": 2,
+      "latency_s": 46.2,
+      "tokens": 29381,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P1",
+          "text": "When the FIR shows no fraudulent inducement or deceit and the parties entered a consensual commercial agreement, mere default in payment does not constitute cheating under the law.",
+          "case_id": "86563873",
+          "title": "Sushree Snehal vs The State Of Madhya Pradesh on 16 May, 2025",
+          "quote": "9. From the bare perusal of the FIR, it is evident that there was no act of cheating, that is, the complainant was nowhere fraudulently induced or dishonestly deceived by the appellants. A commercial transaction took place between the parties during which the parties consensually agreed for the sale of the property of the appellants and respondent no. 2 paid the part consideration. The default in payment of their loan dues on part of the appellants is not reflective of their deceitful intention towards the complainant.",
+          "judge_quote": "Apparently, both the parties consensually agreed for the sale of the property of the petitioners and complainant Brajesh Gupta paid the part consideration. Mere non- registration of the sale in furtherance of agreement or its refusal cannot amount to cheating. The payment of the advance consideration was made in furtherance of agreement to sale and it is not the case of the complainant that he was in anyway fraudulently induced, deceived or duped to make such payments to the petitioners."
+        },
+        {
+          "claim_id": "P2",
+          "text": "To secure a conviction under Section\u202f420 IPC, the prosecution must prove that the accused intended to deceive the victim from the very beginning of the transaction.",
+          "case_id": "62122590",
+          "title": "K.Chandra Mohan vs The State Of Telangana Another on 12 October, 2022",
+          "quote": "In order to prove the offence Section 420 of the Indian Penal Code, the de-facto complainant is expected to place the material before the Court that the petitioner had an intention right from the inception to deceive the de-facto complainant and such acts and omissions of the petitioner constitute the ingredients of the offence under Section 420 IPC.",
+          "judge_quote": "In order to prove the offence Section 420 of the Indian Penal Code, the de-facto complainant is expected to place the material before the Court that the petitioner had an intention right from the inception to deceive the de-facto complainant and such acts and omissions of the petitioner constitute the ingredients of the offence under Section 420 IPC."
+        }
+      ]
+    },
+    {
+      "id": "E12",
+      "split": "dev",
+      "category": "cheating IPC 420",
+      "top_rerank": 5.2205,
+      "retrieved": [
+        "62122590",
+        "124093355",
+        "38768527",
+        "191602608",
+        "5286035",
+        "855018"
+      ],
+      "context_precision": 0.5555555555555555,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 8,
+      "off_unsupported_shown": 5,
+      "off_lint_drops": 5,
+      "on_shown": 3,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 4,
+      "precedent_status": {
+        "passed": 2,
+        "weak": 0,
+        "failed": 0,
+        "unverified": 2
+      },
+      "good_law_with_results": 2,
+      "good_law_searched": 2,
+      "latency_s": 81.7,
+      "tokens": 53220,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P2",
+          "text": "To obtain a conviction under Section\u202f420\u202fIPC, the prosecution must prove that the accused\u2019s dishonest inducement actually caused the victim to deliver property or to alter/destroy a valuable security (or something capable of becoming one). Hence the defence can argue that there is no evidence showing such a causal link between the inducement and the delivery or alteration of property/security.",
+          "case_id": "124093355",
+          "title": "Cbi vs Avinash Chander on 25 September, 2024",
+          "quote": "23. For proceeding against an accused for the commission of the offence of cheating u/Sec. 420 IPC , the dishonest inducement must be shown to have caused delivery of property to any person, or to have brought about the making, alteration, destruction of a valuable security even a part thereof, or of anything that is signed Page No. 23 of 35 and sealed and is capable of being converted into a valuable security.",
+          "judge_quote": "For proceeding against an accused for the commission of the offence of cheating u/Sec. 420 IPC , the dishonest inducement must be shown to have caused delivery of property to any person, or to have brought about the making, alteration, destruction of a valuable security even a part thereof, or of anything that is signed Page No. 23 of 35 and sealed and is capable of being converted into a valuable security."
+        },
+        {
+          "claim_id": "P3",
+          "text": "Defense can assert that the FIR lacks the essential ingredients for Section 467 IPC, so the charge cannot stand.",
+          "case_id": "191602608",
+          "title": "Vikramjit Singh & Anr. vs The State Of Nct Of Delhi & Anr. on 17 October, 2022",
+          "quote": "The basic ingredients of offence under Section 467 are altogether missing even in the allegations of the FIR against the appellants. Therefore, by no stretch of the imagination, the appellants can be legally prosecuted for an offence under Section 467 IPC.",
+          "judge_quote": "The basic ingredients of offence under Section 467 are altogether missing even in the allegations of the FIR against the appellants. Therefore, by no stretch of the imagination, the appellants can be legally prosecuted for an offence under Section 467 IPC."
+        }
+      ]
+    },
+    {
+      "id": "E25",
+      "split": "dev",
+      "category": "SEBI insider trading",
+      "top_rerank": 0.0982,
+      "retrieved": [
+        "71549161",
+        "33248070",
+        "1346432",
+        "56687931",
+        "71549161",
+        "194078395"
+      ],
+      "context_precision": 1.0,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 5,
+      "off_unsupported_shown": 3,
+      "off_lint_drops": 3,
+      "on_shown": 2,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 2,
+      "precedent_status": {
+        "passed": 1,
+        "weak": 0,
+        "failed": 0,
+        "unverified": 1
+      },
+      "good_law_with_results": 1,
+      "good_law_searched": 1,
+      "latency_s": 52.9,
+      "tokens": 23624,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P2",
+          "text": "Formal procedural requirements such as announcing the closure of a trading window are not indispensable; compliance with insider\u2011trading rules is assessed substantively, and the absence of actual trading or attempts indicates adherence to the regulations.",
+          "case_id": "33248070",
+          "title": "Piramal Enterprises Limited vs Sebi on 15 May, 2019",
+          "quote": "Thus, even though, no announcement was made for closure of the trading window, we find that PEL ensured compliance in pith and substance of the Model Code of PEL and the PIT Regulations including the Model Code.",
+          "judge_quote": "The purpose of closing the trading window is for a salutary purpose. It is to ensure that trading is restricted during the period in question and pre-clearance requests can only be sanctioned as per the existing Model Code of PEL. In the given circumstances, even though the trading window was not closed, there was no trading of the scrips by any of the designated employees of the PEL nor any pre-clearance requests were received by PEL. Thus, even though, no announcement was made for closure of the trading window, we find that PEL ensured compliance in pith and substance of the Model Code of PEL and the PIT Regulations including the Model Code. We further find that UPSI at all times was preserved and there was no misuse of UPSI."
+        }
+      ]
+    },
+    {
+      "id": "E26",
+      "split": "dev",
+      "category": "SEBI insider trading",
+      "top_rerank": 0.1956,
+      "retrieved": [
+        "853310",
+        "853310",
+        "1346432",
+        "853310",
+        "853310",
+        "892160"
+      ],
+      "context_precision": 1.0,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 8,
+      "off_unsupported_shown": 2,
+      "off_lint_drops": 5,
+      "on_shown": 6,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 4,
+      "precedent_status": {
+        "passed": 4,
+        "weak": 0,
+        "failed": 0,
+        "unverified": 0
+      },
+      "good_law_with_results": 0,
+      "good_law_searched": 1,
+      "latency_s": 59.5,
+      "tokens": 32639,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P1",
+          "text": "An insider is prohibited from trading, disclosing, or advising others to trade based on unpublished price\u2011sensitive information.",
+          "case_id": "853310",
+          "title": "In Re: Shri D.S. Pendse And Ors.; In Re: ... vs Unknown on 11 January, 2008",
+          "quote": "3. Prohibition on dealing, communication or counseling on matters relating to insider trading - No insider shall - i. either on his own behalf, or on behalf of any other person, deal in securities of a company listed on any stock exchange on the basis of any unpublished price sensitive information; ii. or (ii) communicate any unpublished price sensitive information to any person, with or without his request for such information, except as required in the ordinary course of business or under any law; iii. or (iii) counsel or procure any other person to deal in securities of any company on the basis of unpublished price sensitive information.",
+          "judge_quote": "Regulation 3 of the Insider Regulations reads as under- 3. Prohibition on dealing, communication or counseling on matters relating to insider trading - No insider shall - i. either on his own behalf, or on behalf of any other person, deal in securities of a company listed on any stock exchange on the basis of any unpublished price sensitive information; ii. or (ii) communicate any unpublished price sensitive information to any person, with or without his request for such information, except as required in the ordinary course of business or under any law; iii. or (iii) counsel or procure any other person to deal in securities of any company on the basis of unpublished price sensitive information."
+        },
+        {
+          "claim_id": "P2",
+          "text": "An insider is someone associated with a company who is expected to obtain, or actually obtains, confidential price\u2011sensitive information.",
+          "case_id": "853310",
+          "title": "In Re: Shri D.S. Pendse And Ors.; In Re: ... vs Unknown on 11 January, 2008",
+          "quote": "'insider' means any person who, is or was connected with the company or is deemed to have connected with the company, and who is reasonably expected to have access, by virtue of such connection, to unpublished price sensitive information in respect of securities of the company, or who has received or has received or has had access to such unpublished price sensitive information.",
+          "judge_quote": "The term \"insider\" is defined under Regulation 2(e) of the Insider Regulations. It reads as under- \"'insider' means any person who, is or was connected with the company or is deemed to have connected with the company, and who is reasonably expected to have access, by virtue of such connection, to unpublished price sensitive information in respect of securities of the company, or who has received or has received or has had access to such unpublished price sensitive information.\""
+        },
+        {
+          "claim_id": "P3",
+          "text": "Unpublished price\u2011sensitive information is any undisclosed information about a company\u2019s finances, dividends, share issues, expansions, mergers, asset disposals, earnings, or policies that could materially affect its share price if made public.",
+          "case_id": "853310",
+          "title": "In Re: Shri D.S. Pendse And Ors.; In Re: ... vs Unknown on 11 January, 2008",
+          "quote": "This term has been defined under Regulation 2(k) of Insider Regulations which reads as under- any information which relates to the following matters or is of concern, directly or indirectly, to a company, and is not generally known or published by such company for general information, but which if published or known, is likely to materially affect the price of securities of that company in the market -",
+          "judge_quote": "This term has been defined under Regulation 2(k) of Insider Regulations which reads as under- any information which relates to the following matters or is of concern, directly or indirectly, to a company, and is not generally known or published by such company for general information, but which if published or known, is likely to materially affect the price of securities of that company in the market - a) financial results (both half-yearly and annual) of the company b) intended declaration of dividends (both interim/final) c) issue of shares by way of public, rights, bonus etc,; d) any major expansion plans or execution of new projects; e) amalgamations, mergers and takeovers; f) disposal of the or substantially the whole of the undertaking; g) such other information as may affect the earning of the company; h) any changes in policies, plans or operations of the company."
+        },
+        {
+          "claim_id": "P4",
+          "text": "Falsifying books, accounts, or records violates the prohibition on unfair trade practices.",
+          "case_id": "853310",
+          "title": "In Re: Shri D.S. Pendse And Ors.; In Re: ... vs Unknown on 11 January, 2008",
+          "quote": "43. The falsification of records as proved above was in violation of the provisions of Regulation 6(d) of PFUTP Regulations, which reads as under- 6. Prohibition on unfair trade practice relating to securities.No person shall -(a) ... (b) ... (c) ... (d) indulge in falsification of the books, accounts and records (whether maintained manually or in computer or in any other form); (e) ..",
+          "judge_quote": "The falsification of records as proved above was in violation of the provisions of Regulation 6(d) of PFUTP Regulations, which reads as under- 6. Prohibition on unfair trade practice relating to securities.No person shall -(a) ... (b) ... (c) ... (d) indulge in falsification of the books, accounts and records (whether maintained manually or in computer or in any other form); (e) ..."
+        }
+      ]
+    }
+  ],
+  "audit": [
+    {
+      "id": "E01",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E02",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E03",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E07",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "unverified",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E10",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E11",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E12",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "unverified",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E25",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E26",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    }
+  ]
+}

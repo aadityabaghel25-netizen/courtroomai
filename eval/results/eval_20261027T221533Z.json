@@ -1,0 +1,1855 @@
+{
+  "timestamp": "2026-10-27T22:15:33.797849+00:00",
+  "git_sha": "8ef61b0",
+  "split": "all",
+  "n_cases": 26,
+  "models": {
+    "nano": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "super": "nvidia/nemotron-3-super-120b-a12b",
+    "ultra": "nvidia/Nemotron-3-Ultra-550b-a55b"
+  },
+  "abstain_threshold_used": -0.9018,
+  "abstain_threshold_tuned_on_dev": {
+    "threshold": -0.8044,
+    "dev_accuracy": 0.778,
+    "n": 9
+  },
+  "metrics": {
+    "fabricated_citation_catch_rate_brief_verifier_on": {
+      "k": 26,
+      "n": 26,
+      "pct": 100.0,
+      "wilson95": [
+        0.8713,
+        1.0
+      ]
+    },
+    "fabricated_citation_shown_brief_verifier_off": {
+      "k": 26,
+      "n": 26,
+      "pct": 100.0,
+      "wilson95": [
+        0.8713,
+        1.0
+      ]
+    },
+    "fabricated_citation_catch_rate_audit": {
+      "k": 26,
+      "n": 26,
+      "pct": 100.0,
+      "wilson95": [
+        0.8713,
+        1.0
+      ]
+    },
+    "audit_real_citation_resolved": {
+      "k": 25,
+      "n": 26,
+      "pct": 96.2,
+      "wilson95": [
+        0.8111,
+        0.9932
+      ]
+    },
+    "audit_accuracy_per_citation": {
+      "k": 51,
+      "n": 52,
+      "pct": 98.1,
+      "wilson95": [
+        0.8988,
+        0.9966
+      ]
+    },
+    "unsupported_claims_shown_verifier_off": {
+      "k": 96,
+      "n": 181,
+      "pct": 53.0,
+      "wilson95": [
+        0.4578,
+        0.6017
+      ]
+    },
+    "unsupported_claims_shown_verifier_on": {
+      "k": 0,
+      "n": 85,
+      "pct": 0.0,
+      "wilson95": [
+        0.0,
+        0.0432
+      ]
+    },
+    "narrative_leakage_final_output": {
+      "sentences_with_unknown_entities": 0,
+      "cases": 26
+    },
+    "lint_drops_verifier_off": 111,
+    "lint_drops_verifier_on": 2,
+    "precedent_claims_passed": {
+      "k": 54,
+      "n": 77,
+      "pct": 70.1,
+      "wilson95": [
+        0.5915,
+        0.792
+      ]
+    },
+    "precedent_claims_rejected_or_unverified": {
+      "k": 23,
+      "n": 77,
+      "pct": 29.9,
+      "wilson95": [
+        0.208,
+        0.4085
+      ]
+    },
+    "false_rejection_rate": "needs hand labels (see human_check CSV)",
+    "context_precision_at_k_topic_labels": 0.428,
+    "good_law_cases_with_web_results": {
+      "k": 35,
+      "n": 44,
+      "pct": 79.5,
+      "wilson95": [
+        0.655,
+        0.8885
+      ]
+    },
+    "median_latency_s_per_brief": 48.45,
+    "median_tokens_per_brief": 31760.5,
+    "abstained_cases": 0,
+    "errored_cases": 0
+  },
+  "cases": [
+    {
+      "id": "E01",
+      "split": "dev",
+      "category": "murder IPC 302",
+      "top_rerank": 4.6633,
+      "retrieved": [
+        "12459013",
+        "12459013",
+        "127568675",
+        "127568675",
+        "12459013",
+        "154440315"
+      ],
+      "context_precision": 0.0,
+      "any_relevant_retrieved": false,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 5,
+      "off_unsupported_shown": 4,
+      "off_lint_drops": 3,
+      "on_shown": 1,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 2,
+      "precedent_status": {
+        "passed": 1,
+        "weak": 0,
+        "failed": 1,
+        "unverified": 0
+      },
+      "good_law_with_results": 1,
+      "good_law_searched": 1,
+      "latency_s": 92.6,
+      "tokens": 18736,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P2",
+          "text": "For Section 34 IPC to apply, all accused must share a common intention to commit the offence and each must participate in acts that further that intention.",
+          "case_id": "127568675",
+          "title": "Sushil Arora vs State on 8 February, 2017",
+          "quote": "It is well settled that Section 34 of the Penal Code does not create a distinct offence: it only lays down the principle of joint criminal liability. The necessary conditions for the application of Section 34 of the Code are common intention to commit an offence and participation by all the accused in doing act or acts in furtherance of that common intention. If these two ingredients are established, all the accused would be liable for the said offence.",
+          "judge_quote": "It is well settled that Section 34 of the Penal Code does not create a distinct offence: it only lays down the principle of joint criminal liability. The necessary conditions for the application of Section 34 of the Code are common intention to commit an offence and participation by all the accused in doing act or acts in furtherance of that common intention."
+        }
+      ]
+    },
+    {
+      "id": "E02",
+      "split": "dev",
+      "category": "murder IPC 302",
+      "top_rerank": 7.0913,
+      "retrieved": [
+        "12459013",
+        "88795064",
+        "1202145",
+        "1452368",
+        "12459013",
+        "51856830"
+      ],
+      "context_precision": 0.5,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 7,
+      "off_unsupported_shown": 3,
+      "off_lint_drops": 4,
+      "on_shown": 4,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 3,
+      "precedent_status": {
+        "passed": 2,
+        "weak": 0,
+        "failed": 0,
+        "unverified": 1
+      },
+      "good_law_with_results": 2,
+      "good_law_searched": 2,
+      "latency_s": 66.6,
+      "tokens": 30163,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P1",
+          "text": "The law distinguishes between killings done with intent to cause death, which mandates a prison term up to life, and killings where death is caused knowingly but without intent, which allows the court discretion to impose up to ten years imprisonment.",
+          "case_id": "88795064",
+          "title": "Raval Shaileshbhai Rameshbhai ... vs State Of Gujarat on 17 February, 2026",
+          "quote": "Section 304 deals with cases not covered by Section 302 and it divides the offence into two distinct classes, that is, (a) those in which the death is intentionally caused; and (b) those in which the death is caused unintentionally but knowingly. In the former case the sentence of imprisonment is compulsory and the maximum sentence admissible is imprisonment for life. In the latter case, imprisonment is only optional, and the maximum sentence only extends to imprisonment for 10 years.",
+          "judge_quote": "21.Sections 302 and 304 of the Code are primarily the punitive provisions. They declare what punishment a person would be liable to be awarded, if he commits either of the offences. An analysis of these two sections must be done having regard to what is common to the offences and what is special to each one of them. The offence of culpable homicide is thus an offence which may or may not be murder. If it is murder, then it is culpable homicide amounting to murder, for which punishment is prescribed in Section 302 of the Code. Section 304 deals with cases not covered by Section 302 and it divides the offence into two distinct classes, that is, (a) those in which the death is intentionally caused; and (b) those in which the death is caused unintentionally but knowingly. In the former case the sentence of imprisonment is compulsory and the maximum sentence admissible is imprisonment for life. In the latter case, imprisonment is only optional, and the maximum sentence only extends to imprisonment for 10 years."
+        },
+        {
+          "claim_id": "P2",
+          "text": "If both dacoity and murder are established, the punishment options include a term of rigorous imprisonment up to ten years in addition to death or life imprisonment, while murder alone only allows death or life imprisonment.",
+          "case_id": "12459013",
+          "title": "Jithesh vs The State Of Kerala on 12 August, 2020",
+          "quote": "Whereas, a close look at Section 396 IPC would clearly show that sentences prescribed for dacoity with murder are death or imprisonment for life or rigorous imprisonment for a term, which may extend to 10 years. Crl.Appeal No.567 of 2014 and connected cases 243 Here also fine is a mandatory part of the sentence. Yet, the provision gives three options to a court when it finds an accused guilty for dacoity with murder so as to punish him either with death or imprisonment for life or rigorous imprisonment for a term which may extend to 10 years.",
+          "judge_quote": "As stated above, the substantive punishment prescribed under Section 302 IPC are death or imprisonment for life and no other sentence can be imposed by a court after convicting an accused for murder. Whereas, a close look at Section 396 IPC would clearly show that sentences prescribed for dacoity with murder are death or imprisonment for life or rigorous imprisonment for a term, which may extend to 10 years."
+        }
+      ]
+    },
+    {
+      "id": "E03",
+      "split": "dev",
+      "category": "murder IPC 302",
+      "top_rerank": 4.0369,
+      "retrieved": [
+        "1202145",
+        "12459013",
+        "12459013",
+        "127568675",
+        "12459013",
+        "154440315"
+      ],
+      "context_precision": 0.0,
+      "any_relevant_retrieved": false,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 5,
+      "off_unsupported_shown": 4,
+      "off_lint_drops": 4,
+      "on_shown": 1,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 2,
+      "precedent_status": {
+        "passed": 1,
+        "weak": 0,
+        "failed": 1,
+        "unverified": 0
+      },
+      "good_law_with_results": 1,
+      "good_law_searched": 1,
+      "latency_s": 40.1,
+      "tokens": 14887,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P1",
+          "text": "To hold a person liable under Section 34 IPC, the prosecution must prove an overt act showing that person\u2019s participation in the criminal act; mere membership in an unlawful assembly is not enough.",
+          "case_id": "1202145",
+          "title": "Murugan vs State on 20 September, 2006",
+          "quote": "If a person is to be roped in under Section 34 IPC, there must be some kind of overt-act, indicating, a criminal act was done by all, though it may not be necessary under Section 149 IPC.",
+          "judge_quote": "If a person is to be roped in under Section 34 IPC, there must be some kind of overt-act, indicating, a criminal act was done by all, though it may not be necessary under Section 149 IPC."
+        }
+      ]
+    },
+    {
+      "id": "E04",
+      "split": "test",
+      "category": "dowry harassment IPC 498A",
+      "top_rerank": 6.4547,
+      "retrieved": [
+        "167548317",
+        "124525543",
+        "98097014",
+        "124525543",
+        "124525543",
+        "1521945"
+      ],
+      "context_precision": 1.0,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 6,
+      "off_unsupported_shown": 3,
+      "off_lint_drops": 3,
+      "on_shown": 3,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 2,
+      "precedent_status": {
+        "passed": 1,
+        "weak": 0,
+        "failed": 0,
+        "unverified": 1
+      },
+      "good_law_with_results": 1,
+      "good_law_searched": 1,
+      "latency_s": 45.9,
+      "tokens": 23601,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P2",
+          "text": "The provision targets only serious cruelty or dowry-linked harassment, not everyday disagreements.",
+          "case_id": "124525543",
+          "title": "Abuzar Ahmed vs The State Of Karnataka on 8 January, 2026",
+          "quote": "Section 498A of the IPC is not a panacea for all matrimonial ills. It is a targeted provision meant to address grave cruelty, conduct so wilful and pernicious so as to imperil life, limb or mental health or even harassment tethered to unlawful demands of dowry.",
+          "judge_quote": "The law does not criminalize incompatibility, nor does it punish imperfect marriages. Section 498A of the IPC is not a panacea for all matrimonial ills. It is a targeted provision meant to address grave cruelty, conduct so wilful and pernicious so as to imperil life, limb or mental health or even harassment tethered to unlawful demands of dowry. This is the purport of the provision - 498A."
+        }
+      ]
+    },
+    {
+      "id": "E05",
+      "split": "test",
+      "category": "dowry harassment IPC 498A",
+      "top_rerank": 5.0916,
+      "retrieved": [
+        "45304193",
+        "106007566",
+        "124525543",
+        "47652464",
+        "98097014",
+        "5279119"
+      ],
+      "context_precision": 0.7333333333333333,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 8,
+      "off_unsupported_shown": 3,
+      "off_lint_drops": 5,
+      "on_shown": 5,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 4,
+      "precedent_status": {
+        "passed": 3,
+        "weak": 0,
+        "failed": 0,
+        "unverified": 1
+      },
+      "good_law_with_results": 3,
+      "good_law_searched": 3,
+      "latency_s": 62.6,
+      "tokens": 37951,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P1",
+          "text": "To obtain a conviction, the prosecution must show that a dowry demand existed and that the woman was subjected to cruelty in furtherance of that demand.",
+          "case_id": "45304193",
+          "title": "State vs Bhaskar And Ors on 6 May, 2024",
+          "quote": "With reference to the first point, the prosecution was required to establish the fact that there was a demand of dowry and in furtherance thereof, deceased Bhawna was subjected to cruelty. In this regard, it is important to mention the essential components of Section 498-A IPC which are as follows:",
+          "judge_quote": "With reference to the first point, the prosecution was required to establish the fact that there was a demand of dowry and in furtherance thereof, deceased Bhawna was subjected to cruelty."
+        },
+        {
+          "claim_id": "P3",
+          "text": "A conviction for dowry death requires proof that the woman's death resulted from cruelty or harassment tied to a dowry demand occurring soon before her death.",
+          "case_id": "47652464",
+          "title": "Sudhakar Singh vs State on 18 July, 2014",
+          "quote": "3. The next and the primary question which arises for consideration is whether the suicide was as a result of the required actus reus, i.e., cruelty as defined in Section 498A IPC or the actus reus in the form of demand of dowry soon before the death, which is mandated by Section 304B IPC.",
+          "judge_quote": "Section 304B has the following requirements: (i) The woman should have died because of burns, bodily injury, poison or otherwise than under normal circumstances within seven years of marriage; (ii) It should be shown that soon before her death, she was subjected to cruelty or harassment by her husband or relative of her husband for or in connection with any demand of dowry; and (iii) The term dowry shall have the same meaning as defined in Section 2 of the Dowry Prohibition Act, 1961."
+        },
+        {
+          "claim_id": "P4",
+          "text": "The presumption of dowry death arises only when the prosecution establishes that the woman was subjected to cruelty or harassment connected to a dowry demand in close temporal proximity to her death.",
+          "case_id": "5279119",
+          "title": "State vs . Amrinder Mishra Etc. Page No.1/49 on 28 September, 2019",
+          "quote": "The presumption as to dowry death thus would get activated only upon the proof of the fact that the deceased lady had been subjected to cruelty or harassment for or in connection with any demand for dowry by the accused and that too in the reasonable contiguity of death.",
+          "judge_quote": "The court further observed that the presumption under Section 113-B (Presumption as to dowry death) of the Evidence Act as well is founded on the proof of cruelty or harassment of the woman dead for or in connection with any demand for dowry by the person charged with the offence. The presumption as to dowry death thus would get activated only upon the proof of the fact that the deceased lady had been subjected to cruelty or harassment for or in connection with any demand for dowry by the accused and that too in the reasonable contiguity of death. It was held that such a proof is thus legislatively mandated prerequisite to invoke the otherwise statutorily ordained presumption of commission of the offence of dowry death by the person charged therewith."
+        }
+      ]
+    },
+    {
+      "id": "E06",
+      "split": "test",
+      "category": "dowry harassment IPC 498A",
+      "top_rerank": 6.1659,
+      "retrieved": [
+        "98097014",
+        "90261177",
+        "45304193",
+        "45304193",
+        "108261276",
+        "47652464"
+      ],
+      "context_precision": 0.8055555555555555,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 6,
+      "off_unsupported_shown": 4,
+      "off_lint_drops": 4,
+      "on_shown": 2,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 2,
+      "precedent_status": {
+        "passed": 2,
+        "weak": 0,
+        "failed": 0,
+        "unverified": 0
+      },
+      "good_law_with_results": 2,
+      "good_law_searched": 2,
+      "latency_s": 143.0,
+      "tokens": 36218,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P1",
+          "text": "For the dowry\u2011death provision to apply, the prosecution must prove that the death occurred within seven years of the marriage; failing to prove this means the provision does not apply.",
+          "case_id": "90261177",
+          "title": "Deepak Kumar @ Babbu @ Ballu vs State Of U.P. on 1 August, 2019",
+          "quote": "Thus, it is obligatory on the part of the prosecution to show that death occurred within seven years of marriage. If the prosecution would fail to establish that death did not occur within seven years of marriage, this section will not apply.",
+          "judge_quote": "Thus, it is obligatory on the part of the prosecution to show that death occurred within seven years of marriage. If the prosecution would fail to establish that death did not occur within seven years of marriage, this section will not apply."
+        },
+        {
+          "claim_id": "P2",
+          "text": "Section 304B IPC applies only when a married woman's death occurs outside of ordinary, natural or accidental circumstances\u2014that is, when the death does not happen under normal conditions.",
+          "case_id": "45304193",
+          "title": "State vs Bhaskar And Ors on 6 May, 2024",
+          "quote": "It FIR No. 126/2008 State Vs. Bhaskar and Ors. PS Prasad Nagar , U/s. 302/498A/304B/201/34 IPC 48 of 73 applies to all cases where the death occurs otherwise than under normal circumstances.",
+          "judge_quote": "At the outset, it is important to mention that Section 304B IPC is a special provision which was inserted by the amendment in 1986 to deal with cases of dowry death. It FIR No. 126/2008 State Vs. Bhaskar and Ors. PS Prasad Nagar , U/s. 302/498A/304B/201/34 IPC 48 of 73 applies to all cases where the death occurs otherwise than under normal circumstances. If other conditions are satisfied, when the deceased committed suicide, still the death comes within the scope of Section 304B IPC."
+        }
+      ]
+    },
+    {
+      "id": "E07",
+      "split": "dev",
+      "category": "rape IPC 376",
+      "top_rerank": 3.7358,
+      "retrieved": [
+        "45056617",
+        "18498179",
+        "26266533",
+        "96356448",
+        "26266533",
+        "376047"
+      ],
+      "context_precision": 1.0,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 8,
+      "off_unsupported_shown": 6,
+      "off_lint_drops": 4,
+      "on_shown": 2,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 3,
+      "precedent_status": {
+        "passed": 1,
+        "weak": 0,
+        "failed": 2,
+        "unverified": 0
+      },
+      "good_law_with_results": 1,
+      "good_law_searched": 1,
+      "latency_s": 73.1,
+      "tokens": 43732,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P3",
+          "text": "If the prosecution fails to prove the essential element of sexual intercourse required for rape, the accused may still be held liable for an attempt to commit rape or for a lesser offence such as outraging a woman's modesty.",
+          "case_id": "26266533",
+          "title": "Gaya Prasad Pal @ Mukesh vs State on 9 December, 2016",
+          "quote": "though an accused is charged with the offence of ",
+          "judge_quote": "Similarly, though an accused is charged with the offence of \"rape\" if sexual intercourse is not proved, he can still be held guilty and convicted for the offence of attempt to rape or even the lesser offence of assault for outraging the modesty of the woman."
+        }
+      ]
+    },
+    {
+      "id": "E08",
+      "split": "test",
+      "category": "rape IPC 376",
+      "top_rerank": 3.9807,
+      "retrieved": [
+        "11108356",
+        "199844564",
+        "96210856",
+        "45823962",
+        "96210856",
+        "96210856"
+      ],
+      "context_precision": 0.0,
+      "any_relevant_retrieved": false,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 8,
+      "off_unsupported_shown": 3,
+      "off_lint_drops": 5,
+      "on_shown": 5,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 4,
+      "precedent_status": {
+        "passed": 4,
+        "weak": 0,
+        "failed": 0,
+        "unverified": 0
+      },
+      "good_law_with_results": 1,
+      "good_law_searched": 4,
+      "latency_s": 74.4,
+      "tokens": 34638,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P1",
+          "text": "To prove rape based on a false promise of marriage, the prosecution must show the promise was made in bad faith with no intention to fulfil it and that it directly influenced the victim's consent.",
+          "case_id": "11108356",
+          "title": "Fatima Begum And 2 Others vs The State Of U.P. Thru.Addl. Chief Secy. ... on 7 April, 2026",
+          "quote": "by a ?misconception of fact? arising out of a promise to marry, two propositions must be established. The promise of marriage must have been a false promise, given in bad faith and with no intention of being adhered to at the time it was given. The false promise itself must be of immediate relevance, or bear a direct nexus to the woman?s decision to engage in the sexual act.",
+          "judge_quote": "The promise of marriage must have been a false promise, given in bad faith and with no intention of being adhered to at the time it was given. The false promise itself must be of immediate relevance, or bear a direct nexus to the woman?s decision to engage in the sexual act."
+        },
+        {
+          "claim_id": "P2",
+          "text": "To prove rape arising from a promise of marriage, the accuser must demonstrate that the promisor entered into the promise with no intention of ever marrying, i.e., the promise was false from the start, rather than showing that a genuine promise was later broken.",
+          "case_id": "199844564",
+          "title": "Mallikarjun Desai Goudar vs State Of Karnataka on 28 February, 2023",
+          "quote": "Specifically in the context of a promise to marry, this Court has observed that there is a distinction between a false promise given on the understanding by the maker that it will be broken, and the breach of a promise which is made in good faith but subsequently not fulfilled.",
+          "judge_quote": "Hence, it is evident that there must be adequate evidence to show that at the relevant time i.e. at the initial stage itself, the accused had no intention whatsoever, of keeping his promise to marry the victim."
+        },
+        {
+          "claim_id": "P3",
+          "text": "The mere existence of a promise to marry and its subsequent breach does not establish a false promise; the prosecution must prove the accused lacked any intention to marry from the beginning.",
+          "case_id": "96210856",
+          "title": "Abhishek Nath Pathak vs State Of U.P.And Another on 29 May, 2026",
+          "quote": "We have no doubt that the accused did hold out the promise to marry her and that was the predominant reason for the victim girl to agree to the sexual intimacy with him. PW 12 was also too keen to marry him as she said so specifically. But we find no evidence which gives rise to an inference beyond reasonable doubt that the accused had no intention to marry her at all from the inception and that the promise he made was false to his knowledge.",
+          "judge_quote": "Hence, it is evident that there must be adequate evidence to show that at the relevant time i.e. at the initial stage itself, the accused had no intention whatsoever, of keeping his promise to marry the victim. There may, of course, be circumstances, when a person having the best of intentions is unable to marry the victim owing to various unavoidable circumstances. The \"failure to keep a promise made with respect to a future uncertain date, due to reasons that are not very clear from the evidence available, does not always amount to misconception of fact. In order to come within the meaning of the term \"misconception of fact\", the fact must have an immediate relevance. Section 90 IPC cannot be called into aid in such a situation, to pardon the act of a girl in entirety, and fasten criminal liability on the other, unless the court is assured of the fact that from the very beginning, the accused had never really intended to marry her.\""
+        },
+        {
+          "claim_id": "P4",
+          "text": "If the FIR contains no allegations that the promise was made in bad faith or with intent to deceive, it does not disclose the offence of rape.",
+          "case_id": "45823962",
+          "title": "Pabitra Kumar Pradhan vs State Of Odisha & Another .... Opposite ... on 28 January, 2026",
+          "quote": "did not on its face indicated that the promise by the accused was false or that the victim was engaged in sexual relation with him on the basis of such promise of marriage and it was also found therein that there was no allegation in the F.I.R. that when the accused promised to marry, it was done in bad faith or with intention to deceive her and hence, concluded that the allegation does not establish commission of an offence of rape",
+          "judge_quote": "In the above case, the allegations in the F.I.R. did not on its face indicated that the promise by the accused was false or that the victim was engaged in sexual relation with him on the basis of such promise of marriage and it was also found therein that there was no allegation in the F.I.R. that when the accused promised to marry, it was done in bad faith or with intention to deceive her and hence, concluded that the allegation does not establish commission of an offence of rape and at last, held that the criminal prosecution against the accused should have been quashed."
+        }
+      ]
+    },
+    {
+      "id": "E09",
+      "split": "test",
+      "category": "rape IPC 376",
+      "top_rerank": 7.5823,
+      "retrieved": [
+        "96356448",
+        "376047",
+        "45056617",
+        "26266533",
+        "1556184",
+        "26266533"
+      ],
+      "context_precision": 1.0,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 9,
+      "off_unsupported_shown": 1,
+      "off_lint_drops": 5,
+      "on_shown": 8,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 4,
+      "precedent_status": {
+        "passed": 4,
+        "weak": 0,
+        "failed": 0,
+        "unverified": 0
+      },
+      "good_law_with_results": 3,
+      "good_law_searched": 3,
+      "latency_s": 35.5,
+      "tokens": 32570,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P1",
+          "text": "If rape cannot be proven, the accused may be liable only for attempt to rape or for assault outraging the modesty of the woman, not for rape.",
+          "case_id": "26266533",
+          "title": "Gaya Prasad Pal @ Mukesh vs State on 9 December, 2016",
+          "quote": "though an accused is charged with the offence of ",
+          "judge_quote": "Similarly, though an accused is charged with the offence of \"rape\" if sexual intercourse is not proved, he can still be held guilty and convicted for the offence of attempt to rape or even the lesser offence of assault for outraging the modesty of the woman."
+        },
+        {
+          "claim_id": "P2",
+          "text": "When the same act satisfies both a POCSO penetrative sexual assault and IPC rape, the law permits punishment for only one offense, not both.",
+          "case_id": "26266533",
+          "title": "Gaya Prasad Pal @ Mukesh vs State on 9 December, 2016",
+          "quote": "But, if the ingredients of both the offences (penetrative sexual assault under POCSO Act and rape under IPC ) are brought home, the law would not permit the convicted person to be punished for both the offences. The acts committed by him being common, he can be punished only for one of such offences;",
+          "judge_quote": "But, if the ingredients of both the offences (penetrative sexual assault under POCSO Act and rape under IPC ) are brought home, the law would not permit the convicted person to be punished for both the offences. The acts committed by him being common, he can be punished only for one of such offences;"
+        },
+        {
+          "claim_id": "P3",
+          "text": "A legislative increase in the minimum sentence for Section 376 IPC cannot be applied to offenses committed before the amendment\u2019s effective date; the accused benefits from the law in force at the time of the offense.",
+          "case_id": "1556184",
+          "title": "State Of Himachal Pradesh vs Raghubir Singh on 18 February, 1993",
+          "quote": "The more stringent minimum sentence prescribed for an offence under Section 376 IPC was also incorporated in the Code by an amendment only with effect from December, 1982, after the offence in the present case had been committed. The appeal is consequently allowed and the judgment of the High 26 Court is set aside.",
+          "judge_quote": "The more stringent minimum sentence prescribed for an offence under Section 376 IPC was also incorporated in the Code by an amendment only with effect from December, 1982, after the offence in the present case had been committed."
+        },
+        {
+          "claim_id": "P4",
+          "text": "The court may impose a sentence below the statutory minimum for rape if it finds adequate and special reasons, which must be stated in the judgment.",
+          "case_id": "376047",
+          "title": "T.K. Gopal @ Gopi C vs State Of Karnataka on 5 May, 2000",
+          "quote": "The proviso to this Section, however, gives a discretion to the court to award a sentence of less than 10 years for adequate and special reasons which have to be mentioned in the judgment.",
+          "judge_quote": "The proviso to this Section, however, gives a discretion to the court to award a sentence of less than 10 years for adequate and special reasons which have to be mentioned in the judgment."
+        }
+      ]
+    },
+    {
+      "id": "E10",
+      "split": "dev",
+      "category": "cheating IPC 420",
+      "top_rerank": 6.1534,
+      "retrieved": [
+        "5286035",
+        "62122590",
+        "7248905",
+        "5286035",
+        "7248905",
+        "124093355"
+      ],
+      "context_precision": 0.41111111111111115,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 7,
+      "off_unsupported_shown": 3,
+      "off_lint_drops": 4,
+      "on_shown": 4,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 3,
+      "precedent_status": {
+        "passed": 2,
+        "weak": 0,
+        "failed": 0,
+        "unverified": 1
+      },
+      "good_law_with_results": 0,
+      "good_law_searched": 1,
+      "latency_s": 27.8,
+      "tokens": 31647,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P1",
+          "text": "A charge under Section 406 IPC cannot succeed unless the offence of criminal breach of trust under Section 405 IPC is first established.",
+          "case_id": "5286035",
+          "title": "Monishankar Hazra And Anr vs State Of Haryana And Another on 16 March, 2022",
+          "quote": "Section 406 IPC only provides for punishment of offence under Section 405 and will come into play only once the offence of criminal breach of trust is made out.",
+          "judge_quote": "Section 406 IPC only provides for punishment of offence under Section 405 and will come into play only once the offence of criminal breach of trust is made out."
+        },
+        {
+          "claim_id": "P2",
+          "text": "To prove cheating under Section 420 IPC, the prosecution must show that the accused deceived the victim and induced them to deliver property; absence of such deception defeats the charge.",
+          "case_id": "5286035",
+          "title": "Monishankar Hazra And Anr vs State Of Haryana And Another on 16 March, 2022",
+          "quote": "It is not the case of respondent no.2 that the petitioners had deceived the complainant either fraudulently or dishonestly and had induced him to deliver any property to any person and such act or omission has caused any damage or harm to respondent no.2.",
+          "judge_quote": "With respect to the offence under Section 420 IPC, it is relevant to note that for the commission of the said offence, there has to be cheating. The offence of cheating has been defined in Section 415. Necessary ingredients for the said offence of cheating have been detailed hereinbelow:- i) A person must deceive another person fraudulently or dishonestly. ii) A person so deceived must deliver any property to any person or to consent that any person shall retain any property or intentionally induce the person so deceived to do or omit to do anything, which he would not do or omit if he was not so deceived."
+        }
+      ]
+    },
+    {
+      "id": "E11",
+      "split": "dev",
+      "category": "cheating IPC 420",
+      "top_rerank": 8.3591,
+      "retrieved": [
+        "62122590",
+        "62122590",
+        "9204923",
+        "8238533",
+        "124093355",
+        "38768527"
+      ],
+      "context_precision": 0.3833333333333333,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 7,
+      "off_unsupported_shown": 4,
+      "off_lint_drops": 4,
+      "on_shown": 3,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 3,
+      "precedent_status": {
+        "passed": 2,
+        "weak": 0,
+        "failed": 0,
+        "unverified": 1
+      },
+      "good_law_with_results": 2,
+      "good_law_searched": 2,
+      "latency_s": 43.0,
+      "tokens": 31249,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P1",
+          "text": "If the complainant was not deceived or induced by the accused, the essential ingredients of an offence under sections 419 and 420 IPC are missing.",
+          "case_id": "9204923",
+          "title": "Sunil Kumar Singh vs State Of U.P. And Another on 17 May, 2019",
+          "quote": "this Court find that the basic ingredients to constitute an offence under sections 419 and 420 IPC against the revisionist are lacking, because opposite party No. 2 is not a person, who has been deceived, induced or cheated by any act of",
+          "judge_quote": "In the light of allegations levelled by informant/opposite party No. 2 in the impugned FIR dated 04.09.2015, this Court find that the basic ingredients to constitute an offence under sections 419 and 420 IPC against the revisionist are lacking, because opposite party No. 2 is not a person, who has been deceived, induced or cheated by any act of the revisionist with regard to the issue involved in this case. There is no damage or harm in the body, mind, reputation or property of the informant/opposite party No. 2. As such the complainant cannot be said to be an aggrieved person in any manner."
+        },
+        {
+          "claim_id": "P3",
+          "text": "To secure a conviction under Section\u202f420 IPC, the prosecution must demonstrate that the accused acted with a guilty mind (mens rea) when inducing the victim, as this mental element is required for the offence.",
+          "case_id": "8238533",
+          "title": "Rajesh Sharma vs The State Of Madhya Pradesh on 6 October, 2025",
+          "quote": "exist, thereby reflecting a fraudulent intention (mens rea) to cheat the complainant. From the surrounding circumstances, the presence of mens rea is clearly established, which is a necessary ingredient for constituting the offence under Section 420 IPC.",
+          "judge_quote": "Further, in both the aforesaid sections, mens rea i.e. intention to defraud or the dishonest intention must be present, and in the case of cheating it must be there from the very beginning or inception."
+        }
+      ]
+    },
+    {
+      "id": "E12",
+      "split": "dev",
+      "category": "cheating IPC 420",
+      "top_rerank": 6.064,
+      "retrieved": [
+        "62122590",
+        "124093355",
+        "38768527",
+        "191602608",
+        "855018",
+        "5286035"
+      ],
+      "context_precision": 0.5888888888888889,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 7,
+      "off_unsupported_shown": 3,
+      "off_lint_drops": 4,
+      "on_shown": 4,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 3,
+      "precedent_status": {
+        "passed": 2,
+        "weak": 0,
+        "failed": 0,
+        "unverified": 1
+      },
+      "good_law_with_results": 2,
+      "good_law_searched": 2,
+      "latency_s": 40.7,
+      "tokens": 33721,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P1",
+          "text": "To secure a conviction under Section 420 IPC, the prosecution must prove that the accused made a false representation knowing it was false, with dishonest intent to deceive, and that this inducement led the victim to deliver property or to alter/destroy a valuable security.",
+          "case_id": "62122590",
+          "title": "K.Chandra Mohan vs The State Of Telangana Another on 12 October, 2022",
+          "quote": "(i) The representation made by the person was false. (ii) The accused had prior knowledge that the representation he made was false. (iii) The accused made false representation with dishonest intention in order to deceive the person to whom it was made.",
+          "judge_quote": "35. To establish the offence of cheating in inducing the delivery of property, the following ingredients need to be proved: (i) The representation made by the person was false. (ii) The accused had prior knowledge that the representation he made was false. (iii) The accused made false representation with dishonest intention in order to deceive the person to whom it was made. 11 (iv) The act where the accused induced the person to deliver the property or to perform or to abstain from any act which the person would have not done or had otherwise committed."
+        },
+        {
+          "claim_id": "P2",
+          "text": "A conviction under Section 420 IPC requires proof of deception, a dishonest inducement to deliver property or to alter/destroy a valuable security, and the requisite mens rea.",
+          "case_id": "38768527",
+          "title": "State vs Dalip Kumar Etc on 30 May, 2026",
+          "quote": "The essential ingredients are: (i) deception of a person; (ii) fraudulent or dishonest inducement to deliver property or to alter or destroy a valuable security; and (iii) mens rea.",
+          "judge_quote": "Section 420 IPC/ Cheating and Dishonestly Inducing Delivery of Property: The essential ingredients are: (i) deception of a person; (ii) fraudulent or dishonest inducement to deliver property or to alter or destroy a valuable security; and (iii) mens rea."
+        }
+      ]
+    },
+    {
+      "id": "E13",
+      "split": "test",
+      "category": "anticipatory bail",
+      "top_rerank": 6.1371,
+      "retrieved": [
+        "5286035",
+        "7248905",
+        "5286035",
+        "62122590",
+        "124093355",
+        "7248905"
+      ],
+      "context_precision": 0.0,
+      "any_relevant_retrieved": false,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 5,
+      "off_unsupported_shown": 2,
+      "off_lint_drops": 3,
+      "on_shown": 3,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 2,
+      "precedent_status": {
+        "passed": 2,
+        "weak": 0,
+        "failed": 0,
+        "unverified": 0
+      },
+      "good_law_with_results": 0,
+      "good_law_searched": 1,
+      "latency_s": 27.5,
+      "tokens": 18857,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P1",
+          "text": "For a conviction under Section 406 IPC, the prosecution must prove that the accused was entrusted with property or dominion over property and subsequently dishonestly misappropriated or converted that property; mere allegations of misappropriation without entrustment are insufficient.",
+          "case_id": "5286035",
+          "title": "Monishankar Hazra And Anr vs State Of Haryana And Another on 16 March, 2022",
+          "quote": "Section 406 IPC only provides for punishment of offence under Section 405 and will come into play only once the offence of criminal breach of trust is made out. Section 409 IPC stipulates the offence of criminal breach of trust by public servant or by banker, merchant or agent. It has not been alleged by the complainant that any of the petitioners were entrusted with property in their capacity as public servant or as banker, merchant, factor, broker, attorney or agent, thus, the said offence is not attracted to the facts of the present case.",
+          "judge_quote": "Criminal breach of trust, which is the necessary ingredient of Section 406 and 409 IPC, has been defined in Section 405 IPC. The necessary ingredients of Section 405 IPC are detailed hereinbelow:- i) A person must be entrusted with a property or with dominion over any property. ii) The said person has to dishonestly misappropriate or convert to his own use that property or dishonestly use or dispose of that property in violation of any direction of law etc. In the present case, there is no allegation levelled in the complaint to the effect that the petitioners have been entrusted with any property or dominion over any property and in pursuance of the entrustment have dishonestly misappropriated or converted the same to their own use or have dishonestly used and disposed of the same in violation of any direction of law etc."
+        },
+        {
+          "claim_id": "P2",
+          "text": "To sustain a charge under Section 420 IPC, the prosecution must establish cheating as defined in Section 415, which requires deception, inducement to deliver property (or valuable security), and resulting damage; absence of such allegations defeats the charge.",
+          "case_id": "5286035",
+          "title": "Monishankar Hazra And Anr vs State Of Haryana And Another on 16 March, 2022",
+          "quote": "With respect to the offence under Section 420 IPC, it is relevant to note that for the commission of the said offence, there has to be cheating. The offence of cheating has been defined in Section 415.",
+          "judge_quote": "With respect to the offence under Section 420 IPC, it is relevant to note that for the commission of the said offence, there has to be cheating. The offence of cheating has been defined in Section 415. Necessary ingredients for the said offence of cheating have been detailed hereinbelow:- i) A person must deceive another person fraudulently or dishonestly. ii) A person so deceived must deliver any property to any person or to consent that any person shall retain any property or intentionally induce the person so deceived to do or omit to do anything, which he would not do or omit if he was not so deceived. iii) Such act or omission would cause or is likely to cause damage or harm to that person in body, mind, reputation or property."
+        }
+      ]
+    },
+    {
+      "id": "E14",
+      "split": "test",
+      "category": "anticipatory bail",
+      "top_rerank": 6.4547,
+      "retrieved": [
+        "167548317",
+        "124525543",
+        "98097014",
+        "124525543",
+        "124525543",
+        "1521945"
+      ],
+      "context_precision": 0.0,
+      "any_relevant_retrieved": false,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 5,
+      "off_unsupported_shown": 1,
+      "off_lint_drops": 3,
+      "on_shown": 4,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 2,
+      "precedent_status": {
+        "passed": 2,
+        "weak": 0,
+        "failed": 0,
+        "unverified": 0
+      },
+      "good_law_with_results": 2,
+      "good_law_searched": 2,
+      "latency_s": 40.5,
+      "tokens": 24986,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P1",
+          "text": "Not all marital cruelty qualifies for punishment under 498A; only willful conduct likely to drive a woman to suicide, cause grave injury, or harassment tied to an unlawful demand is covered.",
+          "case_id": "167548317",
+          "title": "State vs Rishi Kumar And Ors. on 12 July, 2018",
+          "quote": "It is not every cruelty which is punishable under Section 498A of IPC. The cruelty, as defined in the explanation to 498A of IPC , is altogether different from the cruelty, which can be subject matter of proceedings, under the provisions of Hindu Marriage Act .",
+          "judge_quote": "A bare reading of Section 498A goes to show that the term cruelty which has been punishable under the Section, has been defined in State VS Rishi Kumar and Ors. FIR no. 388/16 PS - Sagarpur Page no. 34 of 76 the explanation appended to the said section. Therefore, the consequences of cruelty, which are either likely to drive the woman to commit suicide or to cause grave injury/or danger to life limb or health, whether mental or physical, of the woman or harassment of the woman where such harassment is with a view to coerce her or any person related to her to meet any unlawful demand for any property or valuable security or is on account of failure by her or any person related to her to meet such demand, are required to be established in order to prove an offence under Section 498 IPC."
+        },
+        {
+          "claim_id": "P2",
+          "text": "Ordinary marital disagreements or minor skirmishes do not meet the legal threshold for an offense under Section 498A; the provision targets serious cruelty or dowry\u2011related harassment.",
+          "case_id": "124525543",
+          "title": "Abuzar Ahmed vs The State Of Karnataka on 8 January, 2026",
+          "quote": "The Apex Court in the case of ABHISHEK supra holds that minor skirmishes between the husband and the wife cannot be projected to become a crime under Section 498-A of the IPC.",
+          "judge_quote": "Every matrimonial conduct, which may cause annoyance to the other, may not amount to cruelty. Mere trivial irritations, quarrels between spouses, which happen in day-to-day married life, may also not amount to cruelty."
+        }
+      ]
+    },
+    {
+      "id": "E15",
+      "split": "test",
+      "category": "anticipatory bail",
+      "top_rerank": 4.2292,
+      "retrieved": [
+        "188698712",
+        "34982785",
+        "63884401",
+        "77247766",
+        "58537462",
+        "41797969"
+      ],
+      "context_precision": 0.0,
+      "any_relevant_retrieved": false,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 8,
+      "off_unsupported_shown": 3,
+      "off_lint_drops": 5,
+      "on_shown": 5,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 4,
+      "precedent_status": {
+        "passed": 4,
+        "weak": 0,
+        "failed": 0,
+        "unverified": 0
+      },
+      "good_law_with_results": 2,
+      "good_law_searched": 3,
+      "latency_s": 56.2,
+      "tokens": 26633,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P1",
+          "text": "If the FIR fails to allege that the conduct occurred in public view or otherwise bring it within the prohibited provisions, then prima facie no offence under the statute is made out.",
+          "case_id": "188698712",
+          "title": "Dr. Veerendra Singh Thakur vs The State Of Madhya Pradesh on 3 December, 2019",
+          "quote": "In the FIR it is not mentioned that the appellant, abused complainant within public view, so no offence under the provision of SC/ST (Prevention of Atrocities) Act is made out against the appellant.",
+          "judge_quote": "It is alleged that appellant abused complainant in a room. It does not appear from the FIR that appellant abused complainant within the public view, so prima facie no offence under the provisions of SC/ST (Prevention of Atrocities) Act is made out against the appellant."
+        },
+        {
+          "claim_id": "P2",
+          "text": "Absence of allegations that the victim belongs to a protected class and that the accused knew that status means prima facie no offence under the statute is established.",
+          "case_id": "34982785",
+          "title": "Narendra Yadav vs The State Of Madhya Pradesh on 7 January, 2020",
+          "quote": "In this case also in the FIR it is not mentioned that the prosecutrix belonged to scheduled caste community and appellant knowingly it well that she belonged to scheduled caste community abused her or assaulted her, so prima facie no offence under the provisions of SC/ST (Prevention of Atrocities) Act is made out against the appellant.",
+          "judge_quote": "In this case also in the FIR it is not mentioned that the prosecutrix belonged to scheduled caste community and appellant knowingly it well that she belonged to scheduled caste community abused her or assaulted her, so prima facie no offence under the provisions of SC/ST (Prevention of Atrocities) Act is made out against the appellant."
+        },
+        {
+          "claim_id": "P3",
+          "text": "When the FIR omits any assertion that the accused acted with knowledge of the victim\u2019s caste, the offence under the statute is not prima facie made out.",
+          "case_id": "63884401",
+          "title": "Omprakash @ Bablu vs The State Of Madhya Pradesh on 30 August, 2019",
+          "quote": "While in this case, in the FIR it is not mentioned that the appellants assaulted the complainant Naresh Jatav knowingly that he belonged to Scheduled Caste community. So, prima facie from the FIR, no offence under the provisions of SC/ST (Prevention of Atrocities) Act is made out against the appellants.",
+          "judge_quote": "The bar of Section 18 of SC/ST (Prevention of Atrocities) Act is only applicable where from the FIR prima facie offence under the provisions of SC/ST (Prevention of Atrocities) Act is made out. While in this case, in the FIR it is not mentioned that the appellants assaulted the complainant Naresh Jatav knowingly that he belonged to Scheduled Caste community. So, prima facie from the FIR, no offence under the provisions of SC/ST (Prevention of Atrocities) Act is made out against the appellants."
+        },
+        {
+          "claim_id": "P4",
+          "text": "If the court determines that the alleged offense under the SC/ST Act is not prima facie established, it may grant anticipatory bail.",
+          "case_id": "188698712",
+          "title": "Dr. Veerendra Singh Thakur vs The State Of Madhya Pradesh on 3 December, 2019",
+          "quote": "In the crime registered for the offences under the provisions of SC/ST (Prevention of Atrocities) Act anticipatory bail can be granted when it prima facie finds that such an offence is not made out.",
+          "judge_quote": "Provisions of Section 18 of SC/ST (Prevention of Atrocities) Act are attracted only when from the case diary, an offence under the provisions of SC/ST (Prevention of Atrocities) Act is made out. In the crime registered for the offences under the provisions of SC/ST (Prevention of Atrocities) Act anticipatory bail can be granted when it prima facie finds that such an offence is not made out."
+        }
+      ]
+    },
+    {
+      "id": "E16",
+      "split": "test",
+      "category": "bail conditions criminal",
+      "top_rerank": 3.558,
+      "retrieved": [
+        "161683042",
+        "52082777",
+        "66950728",
+        "76684713",
+        "194398505",
+        "160076241"
+      ],
+      "context_precision": 0.0,
+      "any_relevant_retrieved": false,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 5,
+      "off_unsupported_shown": 5,
+      "off_lint_drops": 3,
+      "on_shown": 0,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 1,
+      "precedent_status": {
+        "passed": 0,
+        "weak": 0,
+        "failed": 0,
+        "unverified": 1
+      },
+      "good_law_with_results": 0,
+      "good_law_searched": 0,
+      "latency_s": 35.1,
+      "tokens": 22441,
+      "failed_llm_calls": 0,
+      "passed_precedents": []
+    },
+    {
+      "id": "E17",
+      "split": "test",
+      "category": "bail conditions criminal",
+      "top_rerank": 5.4053,
+      "retrieved": [
+        "62122590",
+        "38768527",
+        "124093355",
+        "124093355",
+        "9204923",
+        "8238533"
+      ],
+      "context_precision": 0.0,
+      "any_relevant_retrieved": false,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 9,
+      "off_unsupported_shown": 4,
+      "off_lint_drops": 5,
+      "on_shown": 5,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 4,
+      "precedent_status": {
+        "passed": 3,
+        "weak": 0,
+        "failed": 0,
+        "unverified": 1
+      },
+      "good_law_with_results": 3,
+      "good_law_searched": 3,
+      "latency_s": 61.9,
+      "tokens": 41535,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P1",
+          "text": "To prove cheating under Section 420 IPC the prosecution must show a false representation, prior knowledge of its falsity, and a dishonest intention to deceive.",
+          "case_id": "62122590",
+          "title": "K.Chandra Mohan vs The State Of Telangana Another on 12 October, 2022",
+          "quote": "(i) The representation made by the person was false. (ii) The accused had prior knowledge that the representation he made was false. (iii) The accused made false representation with dishonest intention in order to deceive the person to whom it was made.",
+          "judge_quote": "35. To establish the offence of cheating in inducing the delivery of property, the following ingredients need to be proved: (i) The representation made by the person was false. (ii) The accused had prior knowledge that the representation he made was false. (iii) The accused made false representation with dishonest intention in order to deceive the person to whom it was made."
+        },
+        {
+          "claim_id": "P3",
+          "text": "Cheating under Section 420 IPC requires more than mere deception; the deception must induce the victim to deliver property, consent to someone retaining property, or cause the victim to act or refrain from acting in a way that results in actual or likely harm to body, mind, reputation, or property.",
+          "case_id": "9204923",
+          "title": "Sunil Kumar Singh vs State Of U.P. And Another on 17 May, 2019",
+          "quote": "Whoever, by deceiving any person, fraudulently or dishonestly induces the person so deceived to deliver any property to any person, or to consent that any person shall retain any property, or intentionally induces the person so deceived to do or omit to do anything which he would not do or omit if he were not so deceived, and which act or omission causes or is likely to cause damage or harm to that person in body, mind, reputation or property, is said to 'cheat'.",
+          "judge_quote": "The essential requisites of the offence of Cheating thus requires- 1. deception of any person. 2 (a) fraudulently or dishonestly inducing that person- (i) to deliver any property to any person; or (ii) to consent that any person shall retain any property; or (b) intentionally inducing that person to do or omit to do anything which he would not do or omit if he were not so deceived, and which act or omission causes or is likely to cause damage or harm to that person in body mind, reputation or property."
+        },
+        {
+          "claim_id": "P4",
+          "text": "A false representation is an essential element of the offence of cheating under Section 420 IPC; without it the offence cannot be established.",
+          "case_id": "8238533",
+          "title": "Rajesh Sharma vs The State Of Madhya Pradesh on 6 October, 2025",
+          "quote": "The making of a false representation is one of the essential ingredients to constitute the offence of cheating under Section 420 I.P.C.",
+          "judge_quote": "The making of a false representation is one of the essential ingredients to constitute the offence of cheating under Section 420 I.P.C."
+        }
+      ]
+    },
+    {
+      "id": "E18",
+      "split": "test",
+      "category": "FIR quashing",
+      "top_rerank": 6.3253,
+      "retrieved": [
+        "5286035",
+        "5286035",
+        "62122590",
+        "7248905",
+        "124093355",
+        "7248905"
+      ],
+      "context_precision": 0.0,
+      "any_relevant_retrieved": false,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 9,
+      "off_unsupported_shown": 4,
+      "off_lint_drops": 7,
+      "on_shown": 5,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 4,
+      "precedent_status": {
+        "passed": 3,
+        "weak": 0,
+        "failed": 0,
+        "unverified": 1
+      },
+      "good_law_with_results": 1,
+      "good_law_searched": 2,
+      "latency_s": 81.0,
+      "tokens": 47723,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P1",
+          "text": "For Section 406 IPC to apply, the offence of criminal breach of trust under Section 405 must first be established, which requires entrustment of property and dishonest misappropriation; absent such entrustment, Section 406 cannot be invoked.",
+          "case_id": "5286035",
+          "title": "Monishankar Hazra And Anr vs State Of Haryana And Another on 16 March, 2022",
+          "quote": "Section 406 IPC only provides for punishment of offence under Section 405 and will come into play only once the offence of criminal breach of trust is made out. Section 409 IPC stipulates the offence of criminal breach of trust by public servant or by banker, merchant or agent.",
+          "judge_quote": "Criminal breach of trust, which is the necessary ingredient of Section 406 and 409 IPC, has been defined in Section 405 IPC. The necessary ingredients of Section 405 IPC are detailed hereinbelow:- i) A person must be entrusted with a property or with dominion over any property. ii) The said person has to dishonestly misappropriate or convert to his own use that property or dishonestly use or dispose of that property in violation of any direction of law etc. In the present case, there is no allegation levelled in the complaint to the effect that the petitioners have been entrusted with any property or dominion over any property and in pursuance of the entrustment have dishonestly misappropriated or converted the same to their own use or have dishonestly used and disposed of the same in violation of any direction of law etc. Thus, the ingredients of Section 405 IPC are not made out. Section 406 IPC only provides for punishment of offence under Section 405 and will come into play only once the offence of criminal breach of trust is made out."
+        },
+        {
+          "claim_id": "P2",
+          "text": "To attract Section 420 IPC, the prosecution must prove cheating as defined in Section 415, which involves deception leading to inducement to deliver property causing damage; without allegations of deception and inducement, the offence is not made out.",
+          "case_id": "5286035",
+          "title": "Monishankar Hazra And Anr vs State Of Haryana And Another on 16 March, 2022",
+          "quote": "With respect to the offence under Section 420 IPC, it is relevant to note that for the commission of the said offence, there has to be cheating. The offence of cheating has been defined in Section 415.",
+          "judge_quote": "With respect to the offence under Section 420 IPC, it is relevant to note that for the commission of the said offence, there has to be cheating. The offence of cheating has been defined in Section 415. Necessary ingredients for the said offence of cheating have been detailed hereinbelow:- i) A person must deceive another person fraudulently or dishonestly. ii) A person so deceived must deliver any property to any person or to consent that any person shall retain any property or intentionally induce the person so deceived to do or omit to do anything, which he would not do or omit if he was not so deceived. iii) Such act or omission would cause or is likely to cause damage or harm to that person in body, mind, reputation or property."
+        },
+        {
+          "claim_id": "P3",
+          "text": "Section 420 IPC requires proof of cheating coupled with inducement to deliver property or alter valuable securities and carries a maximum penalty of seven years imprisonment; lacking such inducement, the offence is not established.",
+          "case_id": "62122590",
+          "title": "K.Chandra Mohan vs The State Of Telangana Another on 12 October, 2022",
+          "quote": "Section 420 IPC is a serious form of cheating that includes inducement (to lead or move someone to happen) in terms of delivery of property as well as valuable securities. This section is also applicable to matters where the destruction of the property is caused by the way of cheating or inducement. Punishment for cheating is provided under this section which may extend to 7 years and also makes the person liable to fine.",
+          "judge_quote": "Section 420 IPC defines \"cheating and dishonestly inducing delivery of property\" which reads as under: \"420. Cheating and dishonestly inducing delivery of property.--Whoever cheats and thereby dishonestly induces the person deceived to deliver any property to any person, or to make, alter or destroy the whole or any part of a valuable security, or anything which is signed or sealed, and which is capable of being converted into a valuable security, shall be punished with imprisonment of either description for a term which may extend to seven years, and shall also be liable to fine.\""
+        }
+      ]
+    },
+    {
+      "id": "E19",
+      "split": "test",
+      "category": "FIR quashing",
+      "top_rerank": 6.4547,
+      "retrieved": [
+        "167548317",
+        "124525543",
+        "98097014",
+        "124525543",
+        "124525543",
+        "1521945"
+      ],
+      "context_precision": 0.0,
+      "any_relevant_retrieved": false,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 7,
+      "off_unsupported_shown": 3,
+      "off_lint_drops": 4,
+      "on_shown": 4,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 3,
+      "precedent_status": {
+        "passed": 2,
+        "weak": 0,
+        "failed": 0,
+        "unverified": 1
+      },
+      "good_law_with_results": 1,
+      "good_law_searched": 1,
+      "latency_s": 35.6,
+      "tokens": 27967,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P2",
+          "text": "Ordinary marital disputes or minor skirmishes do not constitute the offence of cruelty under Section 498A.",
+          "case_id": "124525543",
+          "title": "Abuzar Ahmed vs The State Of Karnataka on 8 January, 2026",
+          "quote": "The Apex Court in the case of ABHISHEK supra holds that minor skirmishes between the husband and the wife cannot be projected to become a crime under Section 498-A of the IPC.",
+          "judge_quote": "Every matrimonial conduct, which may cause annoyance to the other, may not amount to cruelty. Mere trivial irritations, quarrels between spouses, which happen in day-to-day married life, may also not amount to cruelty."
+        },
+        {
+          "claim_id": "P3",
+          "text": "Section 498A applies only to serious cruelty or dowry\u2011linked harassment, not to all matrimonial disagreements.",
+          "case_id": "124525543",
+          "title": "Abuzar Ahmed vs The State Of Karnataka on 8 January, 2026",
+          "quote": "Section 498A of the IPC is not a panacea for all matrimonial ills. It is a targeted provision meant to address grave cruelty, conduct so wilful and pernicious so as to imperil life, limb or mental health or even harassment tethered to unlawful demands of dowry.",
+          "judge_quote": "The law does not criminalize incompatibility, nor does it punish imperfect marriages. Section 498A of the IPC is not a panacea for all matrimonial ills. It is a targeted provision meant to address grave cruelty, conduct so wilful and pernicious so as to imperil life, limb or mental health or even harassment tethered to unlawful demands of dowry."
+        }
+      ]
+    },
+    {
+      "id": "E20",
+      "split": "test",
+      "category": "FIR quashing",
+      "top_rerank": 5.1082,
+      "retrieved": [
+        "157135695",
+        "155590226",
+        "175192944",
+        "788376",
+        "175192944",
+        "153978247"
+      ],
+      "context_precision": 0.0,
+      "any_relevant_retrieved": false,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 5,
+      "off_unsupported_shown": 3,
+      "off_lint_drops": 5,
+      "on_shown": 2,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 2,
+      "precedent_status": {
+        "passed": 1,
+        "weak": 1,
+        "failed": 0,
+        "unverified": 0
+      },
+      "good_law_with_results": 1,
+      "good_law_searched": 1,
+      "latency_s": 39.2,
+      "tokens": 22409,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P1",
+          "text": "The prosecution must prove that the accused demanded a bribe; failure to meet this burden results in acquittal.",
+          "case_id": "788376",
+          "title": "T.M.Shanmughavelu vs State Rep. By on 1 March, 2011",
+          "quote": "case also the prosecution has miserably failed to prove the alleged demand of bribe said to have been made by the accused, as pointed out earlier.",
+          "judge_quote": "10.7. In view of the aforesaid reasons, this Court has no hesitation to hold that the prosecution has miserably failed to prove the first and foremost ingredient of demand of illegal gratification said to have been made by A1 in order to attract the offences alleged against them."
+        }
+      ]
+    },
+    {
+      "id": "E21",
+      "split": "test",
+      "category": "defamation IPC 499",
+      "top_rerank": 6.4771,
+      "retrieved": [
+        "140170613",
+        "173988137",
+        "977130",
+        "118653996",
+        "118653996",
+        "140170613"
+      ],
+      "context_precision": 1.0,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 8,
+      "off_unsupported_shown": 3,
+      "off_lint_drops": 5,
+      "on_shown": 5,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 1,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 4,
+      "precedent_status": {
+        "passed": 3,
+        "weak": 0,
+        "failed": 0,
+        "unverified": 1
+      },
+      "good_law_with_results": 1,
+      "good_law_searched": 1,
+      "latency_s": 47.3,
+      "tokens": 43473,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P1",
+          "text": "To establish defamation under the IPC, the prosecution must prove (1) an imputation about a person, (2) its communication through words, signs, or visible form, and (3) a mental state intending or knowing that it will harm the person's reputation.",
+          "case_id": "140170613",
+          "title": "Standard Chartered Bank vs Vinay Kumar Sood & Ors. on 6 February, 2009",
+          "quote": "For an offence of defamation as defined under Section 499 IPC, three essential ingredients are required to be fulfilled:- Crl.M.C. No. 3828/2007 Page 6 of 18 (i) Making or publishing any imputation concerning any person; (ii) Such imputation must have been made by words either spoken or intended to be read or by signs or by visible representations. (iii) The said imputation must have been made with the intention to harm or with knowledge or having reason to believe that it will harm the reputation of the person concerned.",
+          "judge_quote": "7. For an offence of defamation as defined under Section 499 IPC, three essential ingredients are required to be fulfilled:- Crl.M.C. No. 3828/2007 Page 6 of 18 (i) Making or publishing any imputation concerning any person; (ii) Such imputation must have been made by words either spoken or intended to be read or by signs or by visible representations. (iii) The said imputation must have been made with the intention to harm or with knowledge or having reason to believe that it will harm the reputation of the person concerned."
+        },
+        {
+          "claim_id": "P2",
+          "text": "Intent to harm reputation is an indispensable element of criminal defamation.",
+          "case_id": "140170613",
+          "title": "Standard Chartered Bank vs Vinay Kumar Sood & Ors. on 6 February, 2009",
+          "quote": "Thus, it is clear that intention to cause harm is the most essential sine qua non for an offence under Section 499 IPC.",
+          "judge_quote": "Thus, it is clear that intention to cause harm is the most essential sine qua non for an offence under Section 499 IPC. An offence punishable under Section 500 IPC requires blameworthy mind and is not a statutory offence requiring no mens rea."
+        },
+        {
+          "claim_id": "P3",
+          "text": "A corporate entity lacks the mens rea required for criminal defamation, so it cannot be prosecuted under Section 500 IPC.",
+          "case_id": "140170613",
+          "title": "Standard Chartered Bank vs Vinay Kumar Sood & Ors. on 6 February, 2009",
+          "quote": "A company cannot be in any case held to have committed an offence under Section 500 IPC because, most essential ingredient of the said offence i.e. \u201emens rea\u201f would be missing as a company is a juristic entity or an artificial person, whereas a Director is not a company.",
+          "judge_quote": "A company cannot be in any case held to have committed an offence under Section 500 IPC because, most essential ingredient of the said offence i.e. \u201emens rea\u201f would be missing as a company is a juristic entity or an artificial person, whereas a Director is not a company."
+        }
+      ]
+    },
+    {
+      "id": "E22",
+      "split": "test",
+      "category": "defamation IPC 499",
+      "top_rerank": 2.5927,
+      "retrieved": [
+        "140170613",
+        "62501359",
+        "6254266",
+        "173988137",
+        "861870",
+        "6254266"
+      ],
+      "context_precision": 1.0,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 8,
+      "off_unsupported_shown": 7,
+      "off_lint_drops": 5,
+      "on_shown": 1,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 4,
+      "precedent_status": {
+        "passed": 1,
+        "weak": 2,
+        "failed": 0,
+        "unverified": 1
+      },
+      "good_law_with_results": 0,
+      "good_law_searched": 1,
+      "latency_s": 49.6,
+      "tokens": 45662,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P3",
+          "text": "A statement made in good faith to protect one's own or another's interests, or for the public good, falls under an exception and is not defamation.",
+          "case_id": "6254266",
+          "title": "M/S. Pataka Industries (Pvt.) Ltd vs The State Of West Bengal & Ors on 7 October, 2013",
+          "quote": "Ninth Exception - Imputation made in good faith by person for protection of his or other's interests - It is not defamation to make an imputation on the character of another provided that the imputation be made in good faith for the protection of the interests of the person making it, or of any other person, or for the public good.",
+          "judge_quote": "Ninth Exception - Imputation made in good faith by person for protection of his or other's interests - It is not defamation to make an imputation on the character of another provided that the imputation be made in good faith for the protection of the interests of the person making it, or of any other person, or for the public good."
+        }
+      ]
+    },
+    {
+      "id": "E23",
+      "split": "test",
+      "category": "corporate fraud companies act",
+      "top_rerank": 1.234,
+      "retrieved": [
+        "2922069",
+        "184135932",
+        "91441688",
+        "91441688",
+        "184135932",
+        "30437693"
+      ],
+      "context_precision": 0.7100000000000001,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 7,
+      "off_unsupported_shown": 5,
+      "off_lint_drops": 4,
+      "on_shown": 2,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 1,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 3,
+      "precedent_status": {
+        "passed": 2,
+        "weak": 0,
+        "failed": 1,
+        "unverified": 0
+      },
+      "good_law_with_results": 1,
+      "good_law_searched": 1,
+      "latency_s": 78.4,
+      "tokens": 44409,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P2",
+          "text": "Fraud committed under the Companies Act is punishable by imprisonment and fines.",
+          "case_id": "91441688",
+          "title": "Mrs. Sumana Paruchuri vs Jakka Vinod Kumar Reddy on 6 June, 2022",
+          "quote": "Section 447 of the Companies Act, 2013 deals with punishment for fraud.",
+          "judge_quote": "Section 447 of the Companies Act, 2013 deals with punishment for fraud. It reads as follows: \"447. Punishment for fraud:-- Without prejudice to any liability including repayment of any debt under this Act or any other law for the time being in force, any person who is found to be guilty of fraud involving an amount of at least ten lakh rupees or one per cent. of the turnover of the company, whichever is lower, shall be punishable with imprisonment for a term which shall not be less than six months but which may extend to ten years and shall also be liable to fine which shall not be less than the amount involved in the fraud, but which may extend to three times the amount involved in the fraud: Dr.GRR,J 15 Crl. P No.8025 & 8024 of 2021 Provided that where the fraud in question involves public interest, the term of imprisonment shall not be less than three years."
+        },
+        {
+          "claim_id": "P3",
+          "text": "When fraud does not involve public interest and the amount is below the statutory threshold (less than ten lakh rupees or 1% of turnover), the penalty may be up to five years imprisonment, a fine up to fifty lakh rupees, or both.",
+          "case_id": "91441688",
+          "title": "Mrs. Sumana Paruchuri vs Jakka Vinod Kumar Reddy on 6 June, 2022",
+          "quote": "Provided further that where the fraud involves an amount less than ten lakh rupees or one per cent. of the turnover of the company, whichever is lower, and does not involve public interest, any person guilty of such fraud shall be punishable with imprisonment for a term which may extend to five years or with fine which may extend to fifty lakh rupees or with both.",
+          "judge_quote": "Provided further that where the fraud involves an amount less than ten lakh rupees or one per cent. of the turnover of the company, whichever is lower, and does not involve public interest, any person guilty of such fraud shall be punishable with imprisonment for a term which may extend to five years or with fine which may extend to fifty lakh rupees or with both."
+        }
+      ]
+    },
+    {
+      "id": "E24",
+      "split": "test",
+      "category": "corporate fraud companies act",
+      "top_rerank": 5.1626,
+      "retrieved": [
+        "62122590",
+        "124093355",
+        "191602608",
+        "855018",
+        "5286035",
+        "5286035"
+      ],
+      "context_precision": 0.0,
+      "any_relevant_retrieved": false,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 9,
+      "off_unsupported_shown": 5,
+      "off_lint_drops": 6,
+      "on_shown": 4,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 5,
+      "precedent_status": {
+        "passed": 4,
+        "weak": 0,
+        "failed": 0,
+        "unverified": 1
+      },
+      "good_law_with_results": 3,
+      "good_law_searched": 4,
+      "latency_s": 71.1,
+      "tokens": 43036,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P2",
+          "text": "To secure a conviction under Section 420 IPC, the prosecution must show cheating plus a dishonest inducement that results in delivery of property or alteration/destruction of a valuable security.",
+          "case_id": "124093355",
+          "title": "Cbi vs Avinash Chander on 25 September, 2024",
+          "quote": "The essential ingredients of the offence are etched thereunder as follows: ",
+          "judge_quote": "For proceeding against an accused for the commission of the offence of cheating u/Sec. 420 IPC , the dishonest inducement must be shown to have caused delivery of property to any person, or to have brought about the making, alteration, destruction of a valuable security even a part thereof, or of anything that is signed Page No. 23 of 35 and sealed and is capable of being converted into a valuable security."
+        },
+        {
+          "claim_id": "P3",
+          "text": "To secure a conviction under Section\u202f467 IPC, the prosecution must prove that the accused forged a document and that the forged document belongs to one of the categories specified in the provision (e.g., valuable security, will, authority to adopt a son, etc.).",
+          "case_id": "191602608",
+          "title": "Vikramjit Singh & Anr. vs The State Of Nct Of Delhi & Anr. on 17 October, 2022",
+          "quote": "2. the accused who forged it. 3. the document is one of the kinds enumerated in the aforementioned section.",
+          "judge_quote": "The following ingredients are essential for commission of the offence under Section 467 IPC: 1. the document in question so forged; [45] 2. the accused who forged it. 3. the document is one of the kinds enumerated in the aforementioned section."
+        },
+        {
+          "claim_id": "P4",
+          "text": "Even assuming the truth of all FIR allegations, the prosecution fails to establish a case under Sections 420 and 467 IPC if any essential ingredient is missing.",
+          "case_id": "855018",
+          "title": "Inder Mohan Goswami & Another vs State Of Uttaranchal & Others on 9 October, 2007",
+          "quote": "Even if all the averments made in the FIR are taken to be correct, the case for prosecution under sections 420 and 467 IPC is not made out against the appellants.",
+          "judge_quote": "The basic ingredients of offence under Section 467 are altogether missing even in the allegations of the FIR against the appellants. Therefore, by no stretch of the imagination, the appellants can be legally prosecuted for an offence under Section 467 IPC. Even if all the averments made in the FIR are taken to be correct, the case for prosecution under sections 420 and 467 IPC is not made out against the appellants."
+        },
+        {
+          "claim_id": "P5",
+          "text": "Cheating under Section 420 IPC requires deception, dishonest inducement to deliver property or cause a specific act, and resulting harm to the deceived person\u2019s body, mind, reputation, or property.",
+          "case_id": "5286035",
+          "title": "Monishankar Hazra And Anr vs State Of Haryana And Another on 16 March, 2022",
+          "quote": "The essential ingredients of the offence of ",
+          "judge_quote": "The essential ingredients of the offence of \"cheating\" are as follows : (i) deception of a person either by making a false or misleading representation or by dishonest concealment or by any other act or omission; (ii) fraudulent or dishonest inducement of that person to either deliver any property or to consent to the retention thereof by any person or to intentionally induce that person so deceived to do or omit to do anything which he would not do or omit if he were not so deceived; and (iii) such act or omission causing or is likely to cause damage or harm to that person in body, mind, reputation or property."
+        }
+      ]
+    },
+    {
+      "id": "E25",
+      "split": "dev",
+      "category": "SEBI insider trading",
+      "top_rerank": 2.0335,
+      "retrieved": [
+        "33248070",
+        "71549161",
+        "194078395",
+        "892160",
+        "1346432",
+        "892160"
+      ],
+      "context_precision": 1.0,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 6,
+      "off_unsupported_shown": 6,
+      "off_lint_drops": 3,
+      "on_shown": 0,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 1,
+      "precedent_status": {
+        "passed": 0,
+        "weak": 0,
+        "failed": 1,
+        "unverified": 0
+      },
+      "good_law_with_results": 0,
+      "good_law_searched": 0,
+      "latency_s": 40.4,
+      "tokens": 17277,
+      "failed_llm_calls": 0,
+      "passed_precedents": []
+    },
+    {
+      "id": "E26",
+      "split": "dev",
+      "category": "SEBI insider trading",
+      "top_rerank": 0.1956,
+      "retrieved": [
+        "853310",
+        "853310",
+        "1346432",
+        "853310",
+        "853310",
+        "892160"
+      ],
+      "context_precision": 1.0,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 7,
+      "off_unsupported_shown": 4,
+      "off_lint_drops": 4,
+      "on_shown": 3,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 3,
+      "precedent_status": {
+        "passed": 2,
+        "weak": 0,
+        "failed": 0,
+        "unverified": 1
+      },
+      "good_law_with_results": 1,
+      "good_law_searched": 1,
+      "latency_s": 56.8,
+      "tokens": 31874,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P1",
+          "text": "Insider trading prohibitions cover dealing, communicating, or counseling based on unpublished price sensitive information, except when such communication is required in the ordinary course of business or by law.",
+          "case_id": "853310",
+          "title": "In Re: Shri D.S. Pendse And Ors.; In Re: ... vs Unknown on 11 January, 2008",
+          "quote": "3. Prohibition on dealing, communication or counseling on matters relating to insider trading - No insider shall - i. either on his own behalf, or on behalf of any other person, deal in securities of a company listed on any stock exchange on the basis of any unpublished price sensitive information; ii. or (ii) communicate any unpublished price sensitive information to any person, with or without his request for such information, except as required in the ordinary course of business or under any law; iii. or (iii) counsel or procure any other person to deal in securities of any company on the basis of unpublished price sensitive information.",
+          "judge_quote": "Regulation 3 of the Insider Regulations reads as under- 3. Prohibition on dealing, communication or counseling on matters relating to insider trading - No insider shall - i. either on his own behalf, or on behalf of any other person, deal in securities of a company listed on any stock exchange on the basis of any unpublished price sensitive information; ii. or (ii) communicate any unpublished price sensitive information to any person, with or without his request for such information, except as required in the ordinary course of business or under any law; iii. or (iii) counsel or procure any other person to deal in securities of any company on the basis of unpublished price sensitive information."
+        },
+        {
+          "claim_id": "P3",
+          "text": "A connected person includes directors, officers, employees, or anyone whose professional or business relationship with the company could allow them to obtain unpublished price\u2011sensitive information.",
+          "case_id": "853310",
+          "title": "In Re: Shri D.S. Pendse And Ors.; In Re: ... vs Unknown on 11 January, 2008",
+          "quote": "(ii) occupies the position as an officer or an employee of the company or holds a position involving a professional or business relationship between himself and the company and who may reasonably be expected to have access to unpublished price sensitive information in relation to that company.",
+          "judge_quote": "Regulation 2 (c) reads as under: connected person' means any person who - (i) is a director, as defined in Clause (13) of Section 2 of the Companies Act, 1956 (1 of 1956), of a company, or is deemed to be a director of that company by virtue of sub-clause (10) of Section 307 of that Act; or (ii) occupies the position as an officer or an employee of the company or holds a position involving a professional or business relationship between himself and the company and who may reasonably be expected to have access to unpublished price sensitive information in relation to that company."
+        }
+      ]
+    }
+  ],
+  "audit": [
+    {
+      "id": "E01",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E02",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E03",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E04",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E05",
+      "real_extracted": false,
+      "real_resolved": false,
+      "real_verdict": null,
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E06",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E07",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "unverified",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E08",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E09",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "unverified",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E10",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E11",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "unverified",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E12",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "unverified",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E13",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E14",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E15",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E16",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E17",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E18",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E19",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E20",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E21",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E22",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E23",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E24",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E25",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E26",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    }
+  ]
+}

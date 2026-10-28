@@ -1,0 +1,191 @@
+{
+  "timestamp": "2026-10-27T19:01:21.660813+00:00",
+  "git_sha": "50cfdf9",
+  "split": "dev",
+  "n_cases": 1,
+  "models": {
+    "nano": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "super": "nvidia/nemotron-3-super-120b-a12b",
+    "ultra": "nvidia/Nemotron-3-Ultra-550b-a55b"
+  },
+  "abstain_threshold_used": -100.0,
+  "abstain_threshold_tuned_on_dev": {
+    "threshold": 0.7923,
+    "dev_accuracy": 1.0,
+    "n": 1
+  },
+  "metrics": {
+    "fabricated_citation_catch_rate_brief_verifier_on": {
+      "k": 1,
+      "n": 1,
+      "pct": 100.0,
+      "wilson95": [
+        0.2065,
+        1.0
+      ]
+    },
+    "fabricated_citation_shown_brief_verifier_off": {
+      "k": 1,
+      "n": 1,
+      "pct": 100.0,
+      "wilson95": [
+        0.2065,
+        1.0
+      ]
+    },
+    "fabricated_citation_catch_rate_audit": {
+      "k": 1,
+      "n": 1,
+      "pct": 100.0,
+      "wilson95": [
+        0.2065,
+        1.0
+      ]
+    },
+    "audit_real_citation_resolved": {
+      "k": 1,
+      "n": 1,
+      "pct": 100.0,
+      "wilson95": [
+        0.2065,
+        1.0
+      ]
+    },
+    "audit_accuracy_per_citation": {
+      "k": 2,
+      "n": 2,
+      "pct": 100.0,
+      "wilson95": [
+        0.3424,
+        1.0
+      ]
+    },
+    "unsupported_claims_shown_verifier_off": {
+      "k": 2,
+      "n": 6,
+      "pct": 33.3,
+      "wilson95": [
+        0.0968,
+        0.7
+      ]
+    },
+    "unsupported_claims_shown_verifier_on": {
+      "k": 0,
+      "n": 4,
+      "pct": 0.0,
+      "wilson95": [
+        0.0,
+        0.4899
+      ]
+    },
+    "narrative_leakage_final_output": {
+      "sentences_with_unknown_entities": 0,
+      "cases": 1
+    },
+    "lint_drops_verifier_off": 3,
+    "lint_drops_verifier_on": 0,
+    "precedent_claims_passed": {
+      "k": 2,
+      "n": 2,
+      "pct": 100.0,
+      "wilson95": [
+        0.3424,
+        1.0
+      ]
+    },
+    "precedent_claims_rejected_or_unverified": {
+      "k": 0,
+      "n": 2,
+      "pct": 0.0,
+      "wilson95": [
+        0.0,
+        0.6576
+      ]
+    },
+    "false_rejection_rate": "needs hand labels (see human_check CSV)",
+    "context_precision_at_k_topic_labels": 0.5,
+    "good_law_cases_with_web_results": {
+      "k": 2,
+      "n": 2,
+      "pct": 100.0,
+      "wilson95": [
+        0.3424,
+        1.0
+      ]
+    },
+    "median_latency_s_per_brief": 50.5,
+    "median_tokens_per_brief": 24878,
+    "abstained_cases": 0,
+    "errored_cases": 0
+  },
+  "cases": [
+    {
+      "id": "E01",
+      "split": "dev",
+      "category": "murder IPC 302",
+      "top_rerank": 1.7923,
+      "retrieved": [
+        "45304193",
+        "146923577",
+        "45304193",
+        "88795064",
+        "181575861",
+        "51856830"
+      ],
+      "context_precision": 0.5,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 6,
+      "off_unsupported_shown": 2,
+      "off_lint_drops": 3,
+      "on_shown": 4,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 2,
+      "precedent_status": {
+        "passed": 2,
+        "weak": 0,
+        "failed": 0,
+        "unverified": 0
+      },
+      "good_law_with_results": 2,
+      "good_law_searched": 2,
+      "latency_s": 50.5,
+      "tokens": 24878,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P1",
+          "text": "they replied that some insect had bitten on the arm of Bhawna.",
+          "case_id": "45304193",
+          "title": "State vs Bhaskar And Ors on 6 May, 2024",
+          "quote": "they replied that some insect had bitten on the arm of Bhawna.",
+          "judge_quote": "He saw that Bhawna was unconscious and when he asked them as to what has happened to her, they replied that some insect had bitten on the arm of Bhawna."
+        },
+        {
+          "claim_id": "P2",
+          "text": "When a key prosecution witness turns hostile and does not support the case, the credibility of the prosecution's evidence is weakened.",
+          "case_id": "88795064",
+          "title": "Raval Shaileshbhai Rameshbhai ... vs State Of Gujarat on 17 February, 2026",
+          "quote": "It transpires that the prosecution in support of its case has examined 23 witnesses however, out of the said witnesses the only injured complainant Variyani Maheshkumar Narandas at Exh.-37 who has narrated the incident but turned hostile and did not support the case.",
+          "judge_quote": "The dying declaration recorded by the treating doctors assume paramount importance in this case, particularly in light of the complainant having turned hostile and not supporting the prosecution version regarding the incident."
+        }
+      ]
+    }
+  ],
+  "audit": [
+    {
+      "id": "E01",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    }
+  ]
+}

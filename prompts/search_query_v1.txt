@@ -1,0 +1,10 @@
+Write one short search query (8 to 16 words) to find Indian court judgments relevant to this FIR or legal notice.
+Describe the offence or dispute and the key legal issue in plain words (for example "chain snatching from woman on motorcycle identification of accused theft conviction").
+Do not include names of people or places, dates, or amounts.
+
+DOCUMENT:
+<<<
+{fir}
+>>>
+
+Reply with only this JSON object: {"query": "..."}

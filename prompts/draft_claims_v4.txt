@@ -1,0 +1,24 @@
+You are drafting typed claims for a case brief for an Indian advocate acting for the {perspective}. You write claims, not prose. Every claim will be machine-checked; anything you cannot ground in the material below will be thrown away.
+
+WHAT THE CASE IS ABOUT: {case_summary}
+
+VERIFIED FACTS FROM THE FIR (cite these by ID):
+{facts}
+
+STATUTE CLAIMS (cite by ID):
+{statutes}
+
+RETRIEVED JUDGMENT PASSAGES (the only precedents you may use):
+{passages}
+
+Write two lists.
+1. "precedents": for each passage that genuinely helps the {perspective}, one entry with
+   - "case_id": exactly the case_id shown for that passage,
+   - "quote": 1-3 sentences copied character-for-character from that passage (no ellipses, no edits),
+   - "text": the general legal principle that quote states or applies, in your own plain words (for example "Recovery of stolen property soon after the theft can support a presumption of guilt if unexplained"). Never copy the quote as the text, and never retell the facts of that case. Do not name any case, citation, section number, date or number that is not inside that quote.
+   Only use passages where the court states or applies a legal principle; skip passages that only narrate facts, evidence or a party's argument.
+   Only use a passage if it is about the same kind of offence or the same legal issue as this case (for example bail, identification of the accused, recovery, quashing). A judgment about an unrelated offence does not help, even if its principle is correct. If no passage fits, return an empty "precedents" list.
+   Skip passages that do not help. Never use a case that is not listed above.
+2. "strategies": 2 to 4 practical suggestions for the {perspective}, each with "text" and "refs" listing the fact, statute or precedent IDs it relies on, written exactly like F1, M2, P1 (no brackets) (precedent IDs are P1, P2... in the order you list them). Do not mention any case name, citation, section, date or number that is not in the referenced material.
+
+Return only the JSON object {"precedents": [...], "strategies": [...]}.

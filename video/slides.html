@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>CourtroomAI video cards</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet" />
+<style>
+  :root { --ink:#141821; --body:#454c59; --muted:#8a92a0; --line:#e3e6eb; --bg:#f5f6f8; --brand:#24365e; --brand2:#2f4677; --soft:#e8edf7; --green:#047857; --red:#be123c; --amber:#b45309; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1280px; height: 720px; overflow: hidden; background: var(--bg); font-family: Inter, sans-serif; color: var(--ink); }
+  .slide { display: none; width: 1280px; height: 720px; padding: 72px 96px; position: relative;
+           background: radial-gradient(900px 380px at 85% -60px, rgba(47,70,119,0.10), transparent 70%), var(--bg); }
+  .slide.on { display: flex; flex-direction: column; justify-content: center; }
+  .kicker { font-size: 15px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--brand2); margin-bottom: 22px; }
+  h1 { font-size: 64px; line-height: 1.05; font-weight: 800; letter-spacing: -.02em; }
+  h2 { font-size: 46px; line-height: 1.12; font-weight: 700; letter-spacing: -.015em; }
+  p.lead { font-size: 24px; line-height: 1.5; color: var(--body); margin-top: 22px; max-width: 900px; }
+  .logo { display:flex; align-items:center; gap:14px; margin-bottom: 36px; }
+  .logo .mark { width:52px; height:52px; border-radius:12px; background:var(--brand); display:grid; place-items:center; }
+  .logo span { font-size: 26px; font-weight: 700; }
+  .grid3 { display:grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 40px; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:18px; padding: 26px; box-shadow: 0 10px 30px -20px rgba(20,24,33,.25); }
+  .card h3 { font-size: 21px; margin: 12px 0 8px; }
+  .card p { font-size: 17px; line-height: 1.5; color: var(--body); }
+  .icon { width:44px; height:44px; border-radius:10px; display:grid; place-items:center; font-size: 22px; font-weight: 800; }
+  .bad { background:#fde7ec; color: var(--red); } .good { background:#e3f5ee; color: var(--green); } .info { background: var(--soft); color: var(--brand); }
+  .fake { font-family: 'Source Serif 4', serif; font-size: 30px; background:#fff; border:1px solid var(--line); border-radius: 16px; padding: 26px 30px; margin-top: 34px; position: relative; max-width: 980px; }
+  .stamp { position:absolute; right: 26px; top: -18px; transform: rotate(4deg); border: 3px solid var(--red); color: var(--red); background:#fff; font: 800 18px Inter; letter-spacing: .14em; padding: 6px 14px; border-radius: 8px; }
+  .row { display:flex; align-items:center; gap: 18px; font-size: 30px; margin-top: 22px; }
+  .row .old { font-weight: 700; color: var(--muted); text-decoration: line-through; }
+  .row .arrow { color: var(--brand2); font-weight: 800; }
+  .row .new { font-weight: 800; color: var(--brand); }
+  .flow { display:flex; align-items:center; gap: 16px; margin-top: 46px; }
+  .step { background:#fff; border:1px solid var(--line); border-radius: 16px; padding: 22px 24px; width: 250px; }
+  .step b { display:block; font-size: 20px; margin-bottom: 6px; } .step span { font-size: 16px; color: var(--body); line-height:1.45; display:block; }
+  .chev { font-size: 32px; color: var(--muted); }
+  .stats { display:grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 40px; }
+  .stat { background:#fff; border:1px solid var(--line); border-radius: 18px; padding: 28px; }
+  .stat .n { font-size: 58px; font-weight: 800; letter-spacing: -.02em; }
+  .stat .l { font-size: 18px; color: var(--body); margin-top: 6px; line-height: 1.4; }
+  .stat .s { font-size: 13px; color: var(--muted); margin-top: 10px; }
+  .foot { position:absolute; left: 96px; bottom: 34px; font-size: 14px; color: var(--muted); }
+  .pills { display:flex; gap: 12px; margin-top: 34px; flex-wrap: wrap; }
+  .pill { background:#fff; border:1px solid var(--line); border-radius: 999px; padding: 10px 18px; font-size: 18px; font-weight: 600; color: var(--brand); }
+</style>
+</head>
+<body>
+<!-- 1. Title -->
+<section class="slide" id="s1">
+  <div class="logo"><div class="mark"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></div><span>CourtroomAI</span></div>
+  <h1>Case research you can check,<br/>line by line.</h1>
+  <p class="lead">A verification-first co-pilot for Indian criminal advocates. Every sentence in the brief comes with its proof.</p>
+</section>
+
+<!-- 2. Problem: fake citations -->
+<section class="slide" id="s2">
+  <div class="kicker">The problem · Supreme Court of India, 2 July 2026</div>
+  <h2>Citing AI judgments without verification is now misconduct.</h2>
+  <div class="fake">“It is a misconduct on the part of an advocate to cite such judgments without verification.”</div>
+  <p class="lead">AI research tools can invent case law: a case name that sounds real, a citation that looks real, a quote no judge ever wrote. Stanford researchers found legal AI tools hallucinate in 1 out of 6 or more queries.</p>
+  <div class="foot">Pooja Ramesh Singh v. Jammu and Kashmir Bank Ltd., Civil Appeal No. 11950 of 2025, para 7 · Stanford RegLab / HAI, 2024</div>
+</section>
+
+<!-- 3. Problem: new codes -->
+<section class="slide" id="s3">
+  <div class="kicker">And since 1 July 2024</div>
+  <h2>India's criminal codes have new section numbers.</h2>
+  <div class="row"><span class="old">IPC</span><span class="arrow">→</span><span class="new">Bharatiya Nyaya Sanhita (BNS)</span></div>
+  <div class="row"><span class="old">CrPC</span><span class="arrow">→</span><span class="new">Bharatiya Nagarik Suraksha Sanhita (BNSS)</span></div>
+  <div class="row"><span class="old">Evidence Act</span><span class="arrow">→</span><span class="new">Bharatiya Sakshya Adhiniyam (BSA)</span></div>
+  <p class="lead">Which code applies depends on the date of the offence. One wrong number is an easy, costly mistake.</p>
+</section>
+
+<!-- 4. Idea -->
+<section class="slide" id="s4">
+  <div class="kicker">Our approach</div>
+  <h2>The AI proposes. Code verifies.</h2>
+  <div class="flow">
+    <div class="step"><b>1 · Propose</b><span>The AI may only suggest points, each naming its source.</span></div><div class="chev">›</div>
+    <div class="step"><b>2 · Check</b><span>Facts must match the FIR word for word. Quotes must match the judgment word for word.</span></div><div class="chev">›</div>
+    <div class="step"><b>3 · Review</b><span>An independent model confirms support, and its own quote is checked too.</span></div><div class="chev">›</div>
+    <div class="step"><b>4 · Show</b><span>Only points that pass reach the brief. The rest are listed with the reason.</span></div>
+  </div>
+</section>
+
+<!-- 5. Results (numbers filled from the evaluation file by build.py) -->
+<section class="slide" id="s5">
+  <div class="kicker">Measured, not claimed</div>
+  <h2>We tested it on __N_CASES__ practice cases.</h2>
+  <div class="stats">
+    <div class="stat"><div class="n" style="color:var(--green)">__FAKE_CAUGHT__</div><div class="l">planted fake judgments caught in the brief</div><div class="s">95% interval __FAKE_CI__</div></div>
+    <div class="stat"><div class="n" style="color:var(--red)">__OFF_UNSUP__</div><div class="l">of drafted points would not hold up, with checks switched off</div><div class="s">__OFF_K__ of __OFF_N__ points</div></div>
+    <div class="stat"><div class="n" style="color:var(--brand)">__LEAKS__</div><div class="l">unverified names or figures in the final briefs</div><div class="s">across __N_CASES__ briefs</div></div>
+  </div>
+  <div class="foot">Synthetic FIRs with fictional people. Source: __EVAL_FILE__</div>
+</section>
+
+<!-- 6. Close -->
+<section class="slide" id="s6">
+  <div class="logo"><div class="mark"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></div><span>CourtroomAI</span></div>
+  <h2>Every sentence, checked against the source.</h2>
+  <div class="pills"><span class="pill">NVIDIA Nemotron Nano · Super · Ultra</span><span class="pill">Nebius Token Factory</span><span class="pill">Tavily Search + Extract</span><span class="pill">Open source · MIT</span></div>
+  <p class="lead">A research aid for advocates, not legal advice.</p>
+</section>
+<script>
+  function show() {
+    const id = (location.hash || '#s1').slice(1);
+    document.querySelectorAll('.slide').forEach((el) => el.classList.toggle('on', el.id === id));
+  }
+  show();
+  window.addEventListener('hashchange', show);
+</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+Extract every case citation from the legal draft below.
+
+For each cited case return:
+- "case_name": the case name exactly as written in the draft (e.g. "Arnesh Kumar v. State of Bihar"), or "" if only a reporter citation is given.
+- "citation": the reporter citation exactly as written (e.g. "(2014) 8 SCC 273"), or "" if none.
+- "proposition": the legal point the draft cites this case for, in the draft's own words.
+
+Copy names and citations exactly as they appear. Do not correct, complete or add any citation that is not in the draft. If there are no citations, return an empty list.
+
+DRAFT:
+<<<
+{draft}
+>>>
+
+Reply with only this JSON object:
+{"citations": [{"case_name": "...", "citation": "...", "proposition": "..."}]}

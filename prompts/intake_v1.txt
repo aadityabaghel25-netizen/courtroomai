@@ -1,0 +1,14 @@
+You extract structured data from an Indian FIR or legal notice. Copy, never invent.
+
+FIR:
+<<<
+{fir}
+>>>
+
+Return:
+- "parties": people or bodies named in the FIR, each with "role" (complainant, accused, victim, witness, police, other), "name" as written, and "quote": the exact FIR words naming them.
+- "sections": every statutory provision the FIR cites, each with "act" as written (e.g. "IPC", "BNS", "CrPC", "NDPS Act") and "section" (e.g. "379", "498A", "304(2)"), and "quote": the exact FIR words citing it. Only sections written in the FIR; never add sections you think apply.
+- "offence_date": the date of the alleged offence as written in the FIR, or "" if none, and "offence_date_iso": the same date as YYYY-MM-DD, or "" if it cannot be read unambiguously.
+- "facts": up to 8 key factual allegations. "quote" must be copied character-for-character from the FIR (one sentence or clause, no ellipses). "text" is a short neutral label for the fact.
+
+Every "quote" must appear verbatim in the FIR above.

@@ -1,0 +1,20 @@
+You are drafting typed claims for a case brief for an Indian advocate acting for the {perspective}. You write claims, not prose. Every claim will be machine-checked; anything you cannot ground in the material below will be thrown away.
+
+VERIFIED FACTS FROM THE FIR (cite these by ID):
+{facts}
+
+STATUTE CLAIMS (cite by ID):
+{statutes}
+
+RETRIEVED JUDGMENT PASSAGES (the only precedents you may use):
+{passages}
+
+Write:
+1. "precedent_holding" claims: for each passage that genuinely helps the {perspective}, one claim with
+   - "case_id": exactly the case_id shown for that passage,
+   - "quote": 1-3 sentences copied character-for-character from that passage (no ellipses, no edits),
+   - "text": the legal proposition that quote supports, in plain words. Do not name any case, citation, section number, date or number that is not inside that quote.
+   Skip passages that do not help. Never use a case that is not listed above.
+2. "strategy_suggestion" claims: 2 to 4 practical suggestions for the {perspective}, each with "refs" listing the fact, statute or precedent claim IDs it relies on (precedent IDs are P1, P2... in the order you write them). Do not mention any case name, citation, section, date or number that is not in the referenced material.
+
+Return only the JSON object with a "claims" list.

@@ -1,0 +1,24 @@
+You are checking whether an Indian court judgment supports a specific proposition.
+
+PROPOSITION:
+{proposition}
+
+JUDGMENT: {title}
+TEXT (may be an excerpt around the cited passage):
+<<<
+{judgment_text}
+>>>
+
+Decide one verdict:
+- "supports": the judgment itself states or holds the proposition.
+- "partial": the judgment supports only part of it, or only with conditions the proposition omits.
+- "contradicts": the judgment states the opposite.
+- "not_addressed": the judgment does not deal with the proposition.
+
+Rules:
+- Base the verdict only on the TEXT above, not on what you remember about this case.
+- "quote" must be copied character-for-character from the TEXT, 1 to 3 sentences, and must be the passage your verdict rests on. Do not paraphrase, shorten with ellipses, or fix typos. If no passage applies, use an empty string.
+- A passage that only recites a party's argument is not a holding.
+
+Reply with only this JSON object:
+{{"verdict": "supports" | "partial" | "contradicts" | "not_addressed", "quote": "<verbatim passage>", "reason": "<one sentence>"}}

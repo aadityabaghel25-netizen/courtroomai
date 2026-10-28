@@ -1,0 +1,1613 @@
+{
+  "timestamp": "2026-10-27T21:03:40.451406+00:00",
+  "git_sha": "3a587c5",
+  "split": "all",
+  "n_cases": 26,
+  "models": {
+    "nano": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "super": "nvidia/nemotron-3-super-120b-a12b",
+    "ultra": "nvidia/Nemotron-3-Ultra-550b-a55b"
+  },
+  "abstain_threshold_used": -6.9635,
+  "abstain_threshold_tuned_on_dev": {
+    "threshold": -6.9635,
+    "dev_accuracy": 0.778,
+    "n": 9
+  },
+  "metrics": {
+    "fabricated_citation_catch_rate_brief_verifier_on": {
+      "k": 25,
+      "n": 25,
+      "pct": 100.0,
+      "wilson95": [
+        0.8668,
+        1.0
+      ]
+    },
+    "fabricated_citation_shown_brief_verifier_off": {
+      "k": 25,
+      "n": 25,
+      "pct": 100.0,
+      "wilson95": [
+        0.8668,
+        1.0
+      ]
+    },
+    "fabricated_citation_catch_rate_audit": {
+      "k": 26,
+      "n": 26,
+      "pct": 100.0,
+      "wilson95": [
+        0.8713,
+        1.0
+      ]
+    },
+    "audit_real_citation_resolved": {
+      "k": 25,
+      "n": 26,
+      "pct": 96.2,
+      "wilson95": [
+        0.8111,
+        0.9932
+      ]
+    },
+    "audit_accuracy_per_citation": {
+      "k": 51,
+      "n": 52,
+      "pct": 98.1,
+      "wilson95": [
+        0.8988,
+        0.9966
+      ]
+    },
+    "unsupported_claims_shown_verifier_off": {
+      "k": 104,
+      "n": 162,
+      "pct": 64.2,
+      "wilson95": [
+        0.5656,
+        0.7117
+      ]
+    },
+    "unsupported_claims_shown_verifier_on": {
+      "k": 0,
+      "n": 58,
+      "pct": 0.0,
+      "wilson95": [
+        0.0,
+        0.0621
+      ]
+    },
+    "narrative_leakage_final_output": {
+      "sentences_with_unknown_entities": 0,
+      "cases": 25
+    },
+    "lint_drops_verifier_off": 94,
+    "lint_drops_verifier_on": 0,
+    "precedent_claims_passed": {
+      "k": 29,
+      "n": 63,
+      "pct": 46.0,
+      "wilson95": [
+        0.3431,
+        0.5821
+      ]
+    },
+    "precedent_claims_rejected_or_unverified": {
+      "k": 34,
+      "n": 63,
+      "pct": 54.0,
+      "wilson95": [
+        0.4179,
+        0.6569
+      ]
+    },
+    "false_rejection_rate": "needs hand labels (see human_check CSV)",
+    "context_precision_at_k_topic_labels": 0.494,
+    "good_law_cases_with_web_results": {
+      "k": 14,
+      "n": 23,
+      "pct": 60.9,
+      "wilson95": [
+        0.4079,
+        0.7784
+      ]
+    },
+    "median_latency_s_per_brief": 41.9,
+    "median_tokens_per_brief": 22795,
+    "abstained_cases": 0,
+    "errored_cases": 1
+  },
+  "cases": [
+    {
+      "id": "E01",
+      "split": "dev",
+      "category": "murder IPC 302",
+      "top_rerank": 1.1433,
+      "retrieved": [
+        "45304193",
+        "45304193",
+        "45304193",
+        "111076833",
+        "181575861",
+        "175933709"
+      ],
+      "context_precision": 0.0,
+      "any_relevant_retrieved": false,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 4,
+      "off_unsupported_shown": 3,
+      "off_lint_drops": 2,
+      "on_shown": 1,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 1,
+      "precedent_status": {
+        "passed": 0,
+        "weak": 0,
+        "failed": 1,
+        "unverified": 0
+      },
+      "good_law_with_results": 0,
+      "good_law_searched": 0,
+      "latency_s": 53.6,
+      "tokens": 10150,
+      "failed_llm_calls": 0,
+      "passed_precedents": []
+    },
+    {
+      "id": "E02",
+      "split": "dev",
+      "category": "murder IPC 302",
+      "top_rerank": 6.1304,
+      "retrieved": [
+        "1452368",
+        "1202145",
+        "111076833",
+        "127568675",
+        "123383897",
+        "185655516"
+      ],
+      "context_precision": 1.0,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 5,
+      "off_unsupported_shown": 4,
+      "off_lint_drops": 3,
+      "on_shown": 1,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 1,
+      "precedent_status": {
+        "passed": 0,
+        "weak": 1,
+        "failed": 0,
+        "unverified": 0
+      },
+      "good_law_with_results": 0,
+      "good_law_searched": 0,
+      "latency_s": 31.9,
+      "tokens": 14349,
+      "failed_llm_calls": 0,
+      "passed_precedents": []
+    },
+    {
+      "id": "E03",
+      "split": "dev",
+      "category": "murder IPC 302",
+      "top_rerank": -3.5295,
+      "retrieved": [
+        "17288689",
+        "56760421",
+        "144007464",
+        "61377933",
+        "181575861",
+        "154143034"
+      ],
+      "context_precision": 0.41666666666666663,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 5,
+      "off_unsupported_shown": 1,
+      "off_lint_drops": 3,
+      "on_shown": 4,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 2,
+      "precedent_status": {
+        "passed": 2,
+        "weak": 0,
+        "failed": 0,
+        "unverified": 0
+      },
+      "good_law_with_results": 2,
+      "good_law_searched": 2,
+      "latency_s": 32.8,
+      "tokens": 16127,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P1",
+          "text": "If there is reasonable doubt about the accused's presence at the scene, the accused is entitled to the benefit of that doubt.",
+          "case_id": "17288689",
+          "title": "Raju Balmik vs The State Of Madhya Pradesh on 6 July, 2026",
+          "quote": "the accused is of such a quality and of such a standard that the court may entertain some reasonable doubt regarding his presence at the scene when the occurrence took place, the accused would, no doubt, be entitled to the benefit of that reasonable doubt.",
+          "judge_quote": "But if the evidence adduced by the accused is of such a quality and of such a standard that the court may entertain some reasonable doubt regarding his presence at the scene when the occurrence took place, the accused would, no doubt, be entitled to the benefit of that reasonable doubt."
+        },
+        {
+          "claim_id": "P2",
+          "text": "The prosecution must explain any injuries sustained by the accused; failure to do so can discredit their case.",
+          "case_id": "61377933",
+          "title": "Konakala Ramakrishna @ Ramu And Others vs State Of A.P. Rep. By Its Public ... on 22 September, 2017",
+          "quote": "The Supreme Court observed that it was the bounden duty of the prosecution to give a reasonable explanation for the injuries sustained by the accused in the course of the occurrence but found that, not only had the prosecution not given an explanation, but some of the witnesses said that they did not even see any injuries on the person of the accused. The Supreme Court found that the so-called eye-witnesses, who gave graphic details of the assault on the deceased, deliberately suppressed the injuries on the accused, and held that this was an important circumstance to discredit the entire case of the prosecution.",
+          "judge_quote": "The Supreme Court observed that it was the bounden duty of the prosecution to give a reasonable explanation for the injuries sustained by the accused in the course of the occurrence but found that, not only had the prosecution not given an explanation, but some of the witnesses said that they did not even see any injuries on the person of the accused. The Supreme Court found that the so-called eye-witnesses, who gave graphic details of the assault on the deceased, deliberately suppressed the injuries on the accused, and held that this was an important circumstance to discredit the entire case of the prosecution."
+        }
+      ]
+    },
+    {
+      "id": "E04",
+      "split": "test",
+      "category": "dowry harassment IPC 498A",
+      "top_rerank": 3.3301,
+      "retrieved": [
+        "106007566",
+        "5279119",
+        "106007566",
+        "22858929",
+        "183112794",
+        "98097014"
+      ],
+      "context_precision": 0.5666666666666667,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 5,
+      "off_unsupported_shown": 1,
+      "off_lint_drops": 2,
+      "on_shown": 4,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 1,
+      "precedent_status": {
+        "passed": 1,
+        "weak": 0,
+        "failed": 0,
+        "unverified": 0
+      },
+      "good_law_with_results": 0,
+      "good_law_searched": 1,
+      "latency_s": 41.4,
+      "tokens": 14119,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P1",
+          "text": "A single act of physical cruelty against a married woman in her matrimonial home does not constitute an offence under Section 498A IPC unless it is done to further a dowry demand.",
+          "case_id": "5279119",
+          "title": "State vs . Amrinder Mishra Etc. Page No.1/49 on 28 September, 2019",
+          "quote": "mere a solitary act of physical cruelty against married woman in her matrimonial house is not punishable u/sec 498A IPC , though it may be a cause for judicial intervention under some other laws. It is only when the physical or mental cruelty is meted out to the victim in furtherance of the demand of dowry, it will amount to 'cruelty' within the meaning of section 304 B IPC.",
+          "judge_quote": "in isolation neither the act of demand of dowry nor the act of cruelty is punishable u/s 498A or 304 B IPC , it is only when demand of dowry is coupled with the physical or mental cruelty in furtherance of said demand, the same becomes an offence u/sec 498A IPC ."
+        }
+      ]
+    },
+    {
+      "id": "E05",
+      "split": "test",
+      "category": "dowry harassment IPC 498A",
+      "top_rerank": 2.8727,
+      "retrieved": [
+        "98097014",
+        "47652464",
+        "183112794",
+        "409054",
+        "98097014",
+        "124525543"
+      ],
+      "context_precision": 0.7333333333333333,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 6,
+      "off_unsupported_shown": 1,
+      "off_lint_drops": 3,
+      "on_shown": 5,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 2,
+      "precedent_status": {
+        "passed": 2,
+        "weak": 0,
+        "failed": 0,
+        "unverified": 0
+      },
+      "good_law_with_results": 2,
+      "good_law_searched": 2,
+      "latency_s": 43.3,
+      "tokens": 18235,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P1",
+          "text": "The court held that allegations of harassment must be specific and supported by details; vague, general accusations without particular instances fail to meet the required standard.",
+          "case_id": "98097014",
+          "title": "St. vs . Rahul Verma Etc. on 12 July, 2018",
+          "quote": "Though in the statement Ex. PW4/A it was alleged that the husband used to physically assault her whenever deceased complained about the conduct of her in laws in taunting her for not bringing sufficient dowry but, his deposition in the court is totally silent about any such allegation. The allegation of harassment are bald and general as neither the manner of harassment has been disclosed nor any specific instance has been mentioned by PW4 in his deposition.",
+          "judge_quote": "The general allegation of harassment without describing the exact conduct of accused will not be sufficient to attract the provisions of Section 498A or 304-B IPC . In this regard, I also refer the judgment in Amar Singh vs. State of Rajasthan 2010 (4) Criminal Court Cases 234 (SC) wherein it was held that \" a prosecution witness who merely uses the word \"harassed\" or \"tortured\" and does not describe the exact conduct of accused which, according to him, amounted to harassment or torture may not be believed by the court in cases u/s 498A and 304-B IPC.\""
+        },
+        {
+          "claim_id": "P2",
+          "text": "The court emphasized that accusations must include concrete particulars; vague, omnibus claims lacking specifics do not satisfy the evidentiary burden.",
+          "case_id": "124525543",
+          "title": "Abuzar Ahmed vs The State Of Karnataka on 8 January, 2026",
+          "quote": "In the present case, the allegations made by the Complainant are vague, omnibus and bereft of any material particulars to substantiate this threshold. Apart from claiming that Appellant husband harassed her for want of dowry, the Complainant has not given any specific details or described any particular instance of harassment.",
+          "judge_quote": "In order to meet the threshold of the offences under Section 498A IPC & Sections 3 & 4 of the D.P. Act, 1961, the allegations cannot be ambiguous or made in thin air."
+        }
+      ]
+    },
+    {
+      "id": "E06",
+      "error": "intake failed: invalid structured output after one repair: no valid JSON in model reply: '{\\n  \"parties\": [\\n    {\\n      \"role\": \"complainant\",\\n      \"name\": \"complainant\",\\n      \"quote\": \"complainant\\'s daughter Kavita\"\\n    },\\n    {\\n      \"role\": \"vict'"
+    },
+    {
+      "id": "E07",
+      "split": "dev",
+      "category": "rape IPC 376",
+      "top_rerank": -1.1112,
+      "retrieved": [
+        "45056617",
+        "18498179",
+        "45056617",
+        "106007566",
+        "87545401",
+        "150376548"
+      ],
+      "context_precision": 0.9166666666666666,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 5,
+      "off_unsupported_shown": 5,
+      "off_lint_drops": 2,
+      "on_shown": 0,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 1,
+      "precedent_status": {
+        "passed": 0,
+        "weak": 0,
+        "failed": 1,
+        "unverified": 0
+      },
+      "good_law_with_results": 0,
+      "good_law_searched": 0,
+      "latency_s": 56.7,
+      "tokens": 21836,
+      "failed_llm_calls": 0,
+      "passed_precedents": []
+    },
+    {
+      "id": "E08",
+      "split": "test",
+      "category": "rape IPC 376",
+      "top_rerank": 4.0808,
+      "retrieved": [
+        "96210856",
+        "11108356",
+        "96210856",
+        "96210856",
+        "96210856",
+        "199844564"
+      ],
+      "context_precision": 0.0,
+      "any_relevant_retrieved": false,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 7,
+      "off_unsupported_shown": 4,
+      "off_lint_drops": 4,
+      "on_shown": 3,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 3,
+      "precedent_status": {
+        "passed": 2,
+        "weak": 0,
+        "failed": 1,
+        "unverified": 0
+      },
+      "good_law_with_results": 0,
+      "good_law_searched": 1,
+      "latency_s": 54.0,
+      "tokens": 28672,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P1",
+          "text": "To prove rape on the basis of a false promise of marriage, the prosecution must show that the promise was made in bad faith with no intent to fulfil it and that it directly influenced the victim\u2019s consent to sex.",
+          "case_id": "11108356",
+          "title": "Fatima Begum And 2 Others vs The State Of U.P. Thru.Addl. Chief Secy. ... on 7 April, 2026",
+          "quote": "by a ?misconception of fact? arising out of a promise to marry, two propositions must be established. The promise of marriage must have been a false promise, given in bad faith and with no intention of being adhered to at the time it was given. The false promise itself must be of immediate relevance, or bear a direct nexus to the woman?s decision to engage in the sexual act.",
+          "judge_quote": "To establish whether the ?consent? was vitiated by a ?misconception of fact? arising out of a promise to marry, two propositions must be established. The promise of marriage must have been a false promise, given in bad faith and with no intention of being adhered to at the time it was given. The false promise itself must be of immediate relevance, or bear a direct nexus to the woman?s decision to engage in the sexual act."
+        },
+        {
+          "claim_id": "P2",
+          "text": "A rape charge cannot rest solely on a promise to marry; the promise must have been made solely to obtain sexual consent without any intention to honour it and must be directly linked to the victim\u2019s decision to engage in sex.",
+          "case_id": "11108356",
+          "title": "Fatima Begum And 2 Others vs The State Of U.P. Thru.Addl. Chief Secy. ... on 7 April, 2026",
+          "quote": "It has been time and again settled by this Court, that the mere fact that the parties indulged in physical relations pursuant to a promise to marry will not amount to a rape in every case. An offence under Section 375 of the IPC could only be made out, if promise of marriage was made by the accused solely with a view to obtain consent for sexual relations without having any intent of fulfilling said promise from the very beginning and that such false promise of marriage had a direct bearing on the prosecutrix giving her consent for sexual relations.",
+          "judge_quote": "To establish whether the ?consent? was vitiated by a ?misconception of fact? arising out of a promise to marry, two propositions must be established. The promise of marriage must have been a false promise, given in bad faith and with no intention of being adhered to at the time it was given. The false promise itself must be of immediate relevance, or bear a direct nexus to the woman?s decision to engage in the sexual act."
+        }
+      ]
+    },
+    {
+      "id": "E09",
+      "split": "test",
+      "category": "rape IPC 376",
+      "top_rerank": 8.2566,
+      "retrieved": [
+        "1556184",
+        "96356448",
+        "26266533",
+        "134848873",
+        "1938562",
+        "26266533"
+      ],
+      "context_precision": 0.9166666666666666,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 6,
+      "off_unsupported_shown": 3,
+      "off_lint_drops": 3,
+      "on_shown": 3,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 2,
+      "precedent_status": {
+        "passed": 1,
+        "weak": 0,
+        "failed": 1,
+        "unverified": 0
+      },
+      "good_law_with_results": 1,
+      "good_law_searched": 1,
+      "latency_s": 30.8,
+      "tokens": 17739,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P1",
+          "text": "A court may not increase a defendant's sentence unless the defendant has been given prior notice of the possibility of such enhancement.",
+          "case_id": "1556184",
+          "title": "State Of Himachal Pradesh vs Raghubir Singh on 18 February, 1993",
+          "quote": "putting him on such a notice, the Court cannot enhance the sentence.",
+          "judge_quote": "We may emphasise that though for such an offence a more severe sentence would have been desirable but we have restricted ourselves to the maintenance of the sentence as imposed by the learned Sessions Judge for the reason that the State did not seek any enhancement of the sentence by filing an appropriate petition in the High Court or in this Court and for over a period of seven years, while the case has remained pending here, no notice had been issued to the acquitted respondent to show cause as to why in the event of his acquittal being set aside, a more deterrent sentence, than the one imposed by the Sessions Judge, be not imposed upon him and without putting him on such a notice, the Court cannot enhance the sentence."
+        }
+      ]
+    },
+    {
+      "id": "E10",
+      "split": "dev",
+      "category": "cheating IPC 420",
+      "top_rerank": 2.7527,
+      "retrieved": [
+        "191602608",
+        "191602608",
+        "191602608",
+        "191602608",
+        "191602608",
+        "853800"
+      ],
+      "context_precision": 0.16666666666666666,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 7,
+      "off_unsupported_shown": 5,
+      "off_lint_drops": 4,
+      "on_shown": 2,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 3,
+      "precedent_status": {
+        "passed": 1,
+        "weak": 0,
+        "failed": 2,
+        "unverified": 0
+      },
+      "good_law_with_results": 1,
+      "good_law_searched": 1,
+      "latency_s": 82.6,
+      "tokens": 31996,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P1",
+          "text": "If the allegations, even when assumed true, fail to disclose the essential ingredients of the charged offense, then no offense is made out.",
+          "case_id": "191602608",
+          "title": "Vikramjit Singh & Anr. vs The State Of Nct Of Delhi & Anr. on 17 October, 2022",
+          "quote": "Having considered the allegations in the FIR in their entirety and accepting them to be correct on face value, this court is of the considered view that the same does not constitute an offences under Sections 467 / 468 / 471 / 420 / 120B of the IPC.",
+          "judge_quote": "Where the ingredients required to constitute a criminal offence are not made out from a bare reading of the complaint, the continuation of the criminal proceeding will constitute an abuse of the process of the court."
+        }
+      ]
+    },
+    {
+      "id": "E11",
+      "split": "dev",
+      "category": "cheating IPC 420",
+      "top_rerank": 4.6188,
+      "retrieved": [
+        "124093355",
+        "108025237",
+        "108025237",
+        "124093355",
+        "124093355",
+        "573863"
+      ],
+      "context_precision": 0.7000000000000001,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 7,
+      "off_unsupported_shown": 6,
+      "off_lint_drops": 4,
+      "on_shown": 1,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 3,
+      "precedent_status": {
+        "passed": 1,
+        "weak": 1,
+        "failed": 0,
+        "unverified": 1
+      },
+      "good_law_with_results": 1,
+      "good_law_searched": 1,
+      "latency_s": 46.2,
+      "tokens": 43517,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P2",
+          "text": "An FIR may be quashed when the parties reach a compromise and there is no criminal intent, particularly where the dispute is private in nature.",
+          "case_id": "108025237",
+          "title": "Narayani Gautam & Ors. vs State on 5 November, 2009",
+          "quote": "In Rachna Gera & Ors. vs. State & Ors. , 122(2005)DLT 412, an FIR lodged under Section 406 / 420 / 468 / 471 / 34 of IPC was quashed pursuant to compromise between the parties noticing that there was no allegation of criminal intent at the inception of the transaction and the dispute appeared to be of a private nature.",
+          "judge_quote": "In Rachna Gera & Ors. vs. State & Ors. , 122(2005)DLT 412, an FIR lodged under Section 406 / 420 / 468 / 471 / 34 of IPC was quashed pursuant to compromise between the parties noticing that there was no allegation of criminal intent at the inception of the transaction and the dispute appeared to be of a private nature."
+        }
+      ]
+    },
+    {
+      "id": "E12",
+      "split": "dev",
+      "category": "cheating IPC 420",
+      "top_rerank": -3.4222,
+      "retrieved": [
+        "45304193",
+        "41203430",
+        "66252727",
+        "88329847",
+        "108025237",
+        "41203430"
+      ],
+      "context_precision": 0.0,
+      "any_relevant_retrieved": false,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 6,
+      "off_unsupported_shown": 1,
+      "off_lint_drops": 3,
+      "on_shown": 5,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 2,
+      "precedent_status": {
+        "passed": 2,
+        "weak": 0,
+        "failed": 0,
+        "unverified": 0
+      },
+      "good_law_with_results": 2,
+      "good_law_searched": 2,
+      "latency_s": 41.9,
+      "tokens": 26335,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P1",
+          "text": "A statement recorded after investigation has begun is not an FIR but only a supplementary statement under the Code of Criminal Procedure.",
+          "case_id": "41203430",
+          "title": "Jaswantbhai Chaturbhai Nai And Ors vs The State Of Gujarat And Anr on 4 May, 2017",
+          "quote": "In view of FIR Exh. 56, her said statement dated 7.3.2002 recorded by PW 42 cannot be treated as FIR but can only be a supplementary statement recorded under section 161 of the Code of Criminal Procedure but not under section 154 of the Code of Criminal Procedure as investigation had started on 5.3.2002.",
+          "judge_quote": "In view of FIR Exh. 56, her said statement dated 7.3.2002 recorded by PW 42 cannot be treated as FIR but can only be a supplementary statement recorded under section 161 of the Code of Criminal Procedure but not under section 154 of the Code of Criminal Procedure as investigation had started on 5.3.2002."
+        },
+        {
+          "claim_id": "P2",
+          "text": "An FIR may be quashed when the parties reach a compromise and the court finds that no prima facie offence is disclosed.",
+          "case_id": "108025237",
+          "title": "Narayani Gautam & Ors. vs State on 5 November, 2009",
+          "quote": "In B.K.Sondhi vs.State, 2001(1) JCC Delhi 73, an FIR registered under Sections 420 / 468 / 471 of IPC and was quashed on the basis of compromise between the parties. In that case, the Court also took the view that even prima facie no offence had been made out.",
+          "judge_quote": "In B.K.Sondhi vs.State, 2001(1) JCC Delhi 73, an FIR registered under Sections 420 / 468 / 471 of IPC and was quashed on the basis of compromise between the parties. In that case, the Court also took the view that even prima facie no offence had been made out."
+        }
+      ]
+    },
+    {
+      "id": "E13",
+      "split": "test",
+      "category": "anticipatory bail",
+      "top_rerank": 0.156,
+      "retrieved": [
+        "102984964",
+        "175192944",
+        "175192944",
+        "175192944",
+        "157135695",
+        "124093355"
+      ],
+      "context_precision": 0.0,
+      "any_relevant_retrieved": false,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 5,
+      "off_unsupported_shown": 3,
+      "off_lint_drops": 4,
+      "on_shown": 2,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 1,
+      "precedent_status": {
+        "passed": 1,
+        "weak": 0,
+        "failed": 0,
+        "unverified": 0
+      },
+      "good_law_with_results": 0,
+      "good_law_searched": 1,
+      "latency_s": 22.9,
+      "tokens": 11469,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P1",
+          "text": "For an offense under the Prevention of Corruption Act, the prosecution must prove both demand and acceptance of illegal gratification before a statutory presumption can arise.",
+          "case_id": "157135695",
+          "title": "Laxman Das Lahre (Dead) Through Legal ... vs State Of Chhattisgarh on 24 August, 2026",
+          "quote": "Once demand and acceptance stand proved, the statutory presumption under Section 20 of the Prevention of Corruption Act comes into operation and the accused has not offered any plausible explanation regarding possession of the tainted currency notes,",
+          "judge_quote": "Once demand and acceptance stand proved, the statutory presumption under Section 20 of the Prevention of Corruption Act comes into operation and the accused has not offered any plausible explanation regarding possession of the tainted currency notes, as such the presumption remains unrebutted by the accused."
+        }
+      ]
+    },
+    {
+      "id": "E14",
+      "split": "test",
+      "category": "anticipatory bail",
+      "top_rerank": 6.0702,
+      "retrieved": [
+        "5286035",
+        "183112794",
+        "134848873",
+        "183112794",
+        "183112794",
+        "24280181"
+      ],
+      "context_precision": 0.0,
+      "any_relevant_retrieved": false,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 7,
+      "off_unsupported_shown": 5,
+      "off_lint_drops": 4,
+      "on_shown": 2,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 3,
+      "precedent_status": {
+        "passed": 1,
+        "weak": 2,
+        "failed": 0,
+        "unverified": 0
+      },
+      "good_law_with_results": 1,
+      "good_law_searched": 1,
+      "latency_s": 33.0,
+      "tokens": 27175,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P1",
+          "text": "A charge under Section 406 IPC requires proof of the underlying offence of criminal breach of trust under Section 405 IPC; absent that, Section 406 does not apply.",
+          "case_id": "5286035",
+          "title": "Monishankar Hazra And Anr vs State Of Haryana And Another on 16 March, 2022",
+          "quote": "Section 406 IPC only provides for punishment of offence under Section 405 and will come into play only once the offence of criminal breach of trust is made out.",
+          "judge_quote": "Thus, the ingredients of Section 405 IPC are not made out. Section 406 IPC only provides for punishment of offence under Section 405 and will come into play only once the offence of criminal breach of trust is made out."
+        }
+      ]
+    },
+    {
+      "id": "E15",
+      "split": "test",
+      "category": "anticipatory bail",
+      "top_rerank": 4.9504,
+      "retrieved": [
+        "41797969",
+        "42058507",
+        "188698712",
+        "107472586",
+        "63884401",
+        "58537462"
+      ],
+      "context_precision": 0.0,
+      "any_relevant_retrieved": false,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 7,
+      "off_unsupported_shown": 5,
+      "off_lint_drops": 4,
+      "on_shown": 2,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 3,
+      "precedent_status": {
+        "passed": 2,
+        "weak": 0,
+        "failed": 1,
+        "unverified": 0
+      },
+      "good_law_with_results": 1,
+      "good_law_searched": 2,
+      "latency_s": 37.6,
+      "tokens": 16456,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P2",
+          "text": "When the FIR lacks allegations that the accused knew the victim\u2019s caste or intended to humiliate a member of a protected class, no prima facie case under the atrocities law arises.",
+          "case_id": "42058507",
+          "title": "Akash Jain vs The State Of Madhya Pradesh on 2 November, 2018",
+          "quote": "So prima facie no offence under SC/ST (Prevention of Atrocities) is made out against the appellant.",
+          "judge_quote": "Provisions of Section 18 of SC/ST (Prevention of Atrocities) are attracted only when from the case diary offence under SC/ST (Prevention of Atrocities) is made out. But in this case in the FIR, it is not mentioned that appellant abused the complainant Santosh Kumar or assaulted him knowingly that he belonged to Scheduled Caste or Scheduled Tribe community, So prima facie no offence under SC/ST (Prevention of Atrocities) is made out against the appellant."
+        },
+        {
+          "claim_id": "P3",
+          "text": "Absence of any statement in the FIR linking the alleged conduct to the victim\u2019s protected caste status means the atrocities charge is not prima facie made out.",
+          "case_id": "63884401",
+          "title": "Omprakash @ Bablu vs The State Of Madhya Pradesh on 30 August, 2019",
+          "quote": "While in this case, in the FIR it is not mentioned that the appellants assaulted the complainant Naresh Jatav knowingly that he belonged to Scheduled Caste community. So, prima facie from the FIR, no offence under the provisions of SC/ST (Prevention of Atrocities) Act is made out against the appellants.",
+          "judge_quote": "The bar of Section 18 of SC/ST (Prevention of Atrocities) Act is only applicable where from the FIR prima facie offence under the provisions of SC/ST (Prevention of Atrocities) Act is made out. While in this case, in the FIR it is not mentioned that the appellants assaulted the complainant Naresh Jatav knowingly that he belonged to Scheduled Caste community. So, prima facie from the FIR, no offence under the provisions of SC/ST (Prevention of Atrocities) Act is made out against the appellants."
+        }
+      ]
+    },
+    {
+      "id": "E16",
+      "split": "test",
+      "category": "bail conditions criminal",
+      "top_rerank": 2.3998,
+      "retrieved": [
+        "161683042",
+        "52082777",
+        "66950728",
+        "76684713",
+        "194398505",
+        "56591678"
+      ],
+      "context_precision": 0.0,
+      "any_relevant_retrieved": false,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 6,
+      "off_unsupported_shown": 6,
+      "off_lint_drops": 3,
+      "on_shown": 0,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 2,
+      "precedent_status": {
+        "passed": 0,
+        "weak": 0,
+        "failed": 1,
+        "unverified": 1
+      },
+      "good_law_with_results": 0,
+      "good_law_searched": 0,
+      "latency_s": 35.0,
+      "tokens": 32775,
+      "failed_llm_calls": 0,
+      "passed_precedents": []
+    },
+    {
+      "id": "E17",
+      "split": "test",
+      "category": "bail conditions criminal",
+      "top_rerank": 2.1141,
+      "retrieved": [
+        "1663897",
+        "1663897",
+        "77345363",
+        "1663897",
+        "1663897",
+        "37171504"
+      ],
+      "context_precision": 0.8875,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 9,
+      "off_unsupported_shown": 1,
+      "off_lint_drops": 5,
+      "on_shown": 8,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 4,
+      "precedent_status": {
+        "passed": 4,
+        "weak": 0,
+        "failed": 0,
+        "unverified": 0
+      },
+      "good_law_with_results": 0,
+      "good_law_searched": 1,
+      "latency_s": 31.8,
+      "tokens": 34547,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P1",
+          "text": "Imposing a high monetary deposit as a bail condition at the FIR stage, when the allegations are unproved, is an onerous and improper condition.",
+          "case_id": "1663897",
+          "title": "Mahersing Or His Sucessor In Office ... vs Pradipkumar Bharatlal Poddar Director ... on 24 September, 2003",
+          "quote": "Learned Metropolitan Magistrate ordered the accused to be released on bail on certain unusual conditions that at FIR stage, the accused should pay a huge sum of Rs. 2 lakhs to be set at liberty, in default thereof he was to languish in jail endlessly for his inability to pay the amount. The Apex Court observed that the said condition is onerous.",
+          "judge_quote": "Almost a similar situation which is before this Court was considered by the Apex Court in he case of SANDEEP JAIN vs. N.C.T. OF DELHI reported in AIR 2000 SC 714. There, the accused was charged for offences punishable under section 420 and 406 of I.P.C. Learned Metropolitan Magistrate ordered the accused to be released on bail on certain unusual conditions that at FIR stage, the accused should pay a huge sum of Rs. 2 lakhs to be set at liberty, in default thereof he was to languish in jail endlessly for his inability to pay the amount. The Apex Court observed that the said condition is onerous. The Apex Court observed as under: \"We are unable to appreciate even the first order passed by the Metropolitan Magistrate imposing the onerous condition that an accused at the FIR stage should pay a huge sum of Rs. 2 lacs to be set at liberty. \" The Apex Court further observed that at that stage the Court had not even come to a conclusion that the allegations made in the F.I.R. are true. The conditions were, therefore, modified."
+        },
+        {
+          "claim_id": "P2",
+          "text": "A court cannot mandate cash security as a bail condition; the accused may voluntarily offer a deposit in lieu of a bond, but the court lacks authority to impose such a requirement.",
+          "case_id": "1663897",
+          "title": "Mahersing Or His Sucessor In Office ... vs Pradipkumar Bharatlal Poddar Director ... on 24 September, 2003",
+          "quote": "Thus, the provision for cash security is not contemplated under section 441. The option is with the person who is required to execute bond with or without surety to seek permission of the Court for cash security in lieu of execution of bond and thereupon the discretion is with the Court either to grant or refuse such permission. Differently put, the provisions do not empower the Court to impose a condition for cash surety.",
+          "judge_quote": "It is thus very clear that section 441 Cr. P.C. does not contemplate cash deposit. Section 445 Cr. P.C. firstly gives the option to the accused to offer cash security in lieu of executing a bond and then the discretion is with the Court either to permit such cash deposit or to refuse it but the Court on its own cannot direct deposit of cash security."
+        },
+        {
+          "claim_id": "P3",
+          "text": "Requiring a large cash surety is tantamount to denying bail, as it effectively prevents release despite formal bail being granted.",
+          "case_id": "1663897",
+          "title": "Mahersing Or His Sucessor In Office ... vs Pradipkumar Bharatlal Poddar Director ... on 24 September, 2003",
+          "quote": "In the case of KESHAV NARAYAN v. STATE OF BIHAR reported in AIR 1985 SC 1666 the Apex Court observed that condition requiring the accused to furnish security for Re.1 lakh in cash or in fixed deposit in nationalized bank with two sureties residing in the State for the like amount as as good as denial of bail itself.",
+          "judge_quote": "In the case of KESHAV NARAYAN v. STATE OF BIHAR reported in AIR 1985 SC 1666 the Apex Court observed that condition requiring the accused to furnish security for Re.1 lakh in cash or in fixed deposit in nationalized bank with two sureties residing in the State for the like amount as as good as denial of bail itself."
+        },
+        {
+          "claim_id": "P4",
+          "text": "Setting an excessively high deposit amount for bail is not a valid exercise of judicial power and will be set aside.",
+          "case_id": "1663897",
+          "title": "Mahersing Or His Sucessor In Office ... vs Pradipkumar Bharatlal Poddar Director ... on 24 September, 2003",
+          "quote": "In the case of BALBIR SINGH CHIB vs. SANJAY DAVE reported in AIR 2000 SC 3563 (1), the Apex Court set aside an order granting anticipatory bail on condition of deposit of Rs.10 Crores holding that the power is not exercised judicially.",
+          "judge_quote": "In the opinion of this Court, therefore, the condition of pre-deposit of Rs. 23 lakhs and further deposit of the remaining amount of 25% of the evaded duty [which is not yet exactly determined or adjudicated] is neither proper nor legal, nor can it be said to have been imposed in exercise of judicial discretion. It cannot be sustained."
+        }
+      ]
+    },
+    {
+      "id": "E18",
+      "split": "test",
+      "category": "FIR quashing",
+      "top_rerank": 4.585,
+      "retrieved": [
+        "178824220",
+        "6408466",
+        "191602608",
+        "178824220",
+        "178824220",
+        "86563873"
+      ],
+      "context_precision": 0.0,
+      "any_relevant_retrieved": false,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 9,
+      "off_unsupported_shown": 6,
+      "off_lint_drops": 6,
+      "on_shown": 3,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 5,
+      "precedent_status": {
+        "passed": 2,
+        "weak": 0,
+        "failed": 2,
+        "unverified": 1
+      },
+      "good_law_with_results": 0,
+      "good_law_searched": 1,
+      "latency_s": 66.4,
+      "tokens": 52341,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P2",
+          "text": "Even if the allegations are accepted as true, no offence is made out when the dispute is purely civil and concerns non\u2011payment for goods; cheating requires dishonest intent at inception and criminal breach of trust requires entrustment and misappropriation, neither of which are present in a simple failure to pay.",
+          "case_id": "178824220",
+          "title": "V. Murali Krishna And Another vs The State Of Telangana And Another on 4 November, 2025",
+          "quote": "The Court held that even if all allegations were accepted as true, no criminal offence was made out since the dispute was purely civil in nature, concerning non-payment for goods sold. It reiterated that criminal breach of trust requires entrustment of property and dishonest misappropriation, while cheating requires dishonest intention at the inception of the transaction both of which were absent.",
+          "judge_quote": "The Court held that even if all allegations were accepted as true, no criminal offence was made out since the dispute was purely civil in nature, concerning non-payment for goods sold. It reiterated that criminal breach of trust requires entrustment of property and dishonest misappropriation, while cheating requires dishonest intention at the inception of the transaction both of which were absent."
+        },
+        {
+          "claim_id": "P4",
+          "text": "At the FIR\u2011quashing stage the court only examines whether the allegations, taken as true, prima facie constitute an offence; it must not assess the truth of the evidence, and the power under Section\u202f482 Cr.P.C. must be exercised sparingly to prevent abuse of process.",
+          "case_id": "178824220",
+          "title": "V. Murali Krishna And Another vs The State Of Telangana And Another on 4 November, 2025",
+          "quote": "At the quashing stage, the only test is whether the allegations in the complaint, taken at face value, prima facie make out the ingredients of the alleged offence. The Court criticized the High Court for exceeding its jurisdiction by assessing the veracity of the suicide note and the complainant's statements without an evidentiary record. Reiterating settled law, the Court observed that the inherent power under Section 482 is wide but must be used sparingly and with caution to prevent abuse of the process of law or to secure the ends of justice.",
+          "judge_quote": "At the quashing stage, the only test is whether the allegations in the complaint, taken at face value, prima facie make out the ingredients of the alleged offence. The Court criticized the High Court for exceeding its jurisdiction by assessing the veracity of the suicide note and the complainant's statements without an evidentiary record. Reiterating settled law, the Court observed that the inherent power under Section 482 is wide but must be used sparingly and with caution to prevent abuse of the process of law or to secure the ends of justice."
+        }
+      ]
+    },
+    {
+      "id": "E19",
+      "split": "test",
+      "category": "FIR quashing",
+      "top_rerank": 0.0215,
+      "retrieved": [
+        "108025237",
+        "183112794",
+        "134848873",
+        "51180832",
+        "5286035",
+        "183112794"
+      ],
+      "context_precision": 0.8333333333333333,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 8,
+      "off_unsupported_shown": 7,
+      "off_lint_drops": 5,
+      "on_shown": 1,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 4,
+      "precedent_status": {
+        "passed": 1,
+        "weak": 1,
+        "failed": 2,
+        "unverified": 0
+      },
+      "good_law_with_results": 0,
+      "good_law_searched": 1,
+      "latency_s": 52.5,
+      "tokens": 32399,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P4",
+          "text": "General, unspecific allegations that do not attribute a specific role to an accused are insufficient to sustain charges; the allegations must be particularized.",
+          "case_id": "183112794",
+          "title": "Anwar Beig vs State on 3 June, 2022",
+          "quote": "Furthermore, no specific and distinct allegations have been made against the revisionist no. 1. The revisionist no. 1 has not been attributed any specific role in furtherance of the general allegations made against them. The allegations against the revisionist no. 1 are therefore general and omnibus and can at best be said to have been made out on account of small skirmishes.",
+          "judge_quote": "In my view, these allegations are not sufficient to frame charge against the revisionist no. 1 for the offence under section 498A of the IPC. There are no specific allegations against him that he used to demand dowry or used to beat or harass the complainant. He himself did not demand the dowry. He only stated that his son was right and she should ask her mother to give motorcycle. The complainant has not specified the abuses. The general allegations are levelled against the revisionist no. 1. Furthermore, no specific and distinct allegations have been made against the revisionist no. 1. The revisionist no. 1 has not been attributed any specific role in furtherance of the general allegations made against them. The allegations against the revisionist no. 1 are therefore general and omnibus and can at best be said to have been made out on account of small skirmishes."
+        }
+      ]
+    },
+    {
+      "id": "E20",
+      "split": "test",
+      "category": "FIR quashing",
+      "top_rerank": 2.1615,
+      "retrieved": [
+        "182511482",
+        "161561943",
+        "102303449",
+        "48669832",
+        "157376965",
+        "157135695"
+      ],
+      "context_precision": 0.0,
+      "any_relevant_retrieved": false,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 6,
+      "off_unsupported_shown": 6,
+      "off_lint_drops": 5,
+      "on_shown": 0,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 3,
+      "precedent_status": {
+        "passed": 0,
+        "weak": 2,
+        "failed": 1,
+        "unverified": 0
+      },
+      "good_law_with_results": 0,
+      "good_law_searched": 0,
+      "latency_s": 43.7,
+      "tokens": 27123,
+      "failed_llm_calls": 0,
+      "passed_precedents": []
+    },
+    {
+      "id": "E21",
+      "split": "test",
+      "category": "defamation IPC 499",
+      "top_rerank": 2.7196,
+      "retrieved": [
+        "6254266",
+        "66252727",
+        "41203430",
+        "88329847",
+        "88329847",
+        "66252727"
+      ],
+      "context_precision": 1.0,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 5,
+      "off_unsupported_shown": 3,
+      "off_lint_drops": 3,
+      "on_shown": 2,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 2,
+      "precedent_status": {
+        "passed": 1,
+        "weak": 0,
+        "failed": 1,
+        "unverified": 0
+      },
+      "good_law_with_results": 0,
+      "good_law_searched": 1,
+      "latency_s": 41.0,
+      "tokens": 18593,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P2",
+          "text": "Under Section 202 CrPC, the magistrate\u2019s inquiry is confined to verifying the truth of the complaint\u2019s allegations and determining whether a prima facie case exists; the accused has no right to be heard or to present any defence at this stage.",
+          "case_id": "6254266",
+          "title": "M/S. Pataka Industries (Pvt.) Ltd vs The State Of West Bengal & Ors on 7 October, 2013",
+          "quote": "The scope of the inquiry under Section 202 is extremely limited - only to the ascertainment of the truth or falsehood of the allegations made in the complaint (i) on the materials placed by the complainant before the court; (ii) for the limited purpose of finding out whether a prima facie case for the issue of process has been made out and (iii) for deciding the question purely from the point of view of the complainant without at all adverting to any defence that the accused may have. In proceedings under Section 202 , the accused has got absolutely no locus standi and is not entitled to be heard on the question whether the process should be issued against him or not.",
+          "judge_quote": "The scope of enquiry under Section 202 of the Code of Criminal Procedure is limited to the ascertainment of truth or falsehood of the allegations made in the complaint (i) on the materials placed by the complainant before the court (ii) for the limited purpose of finding out whether a prima facie case for issue of process has been made out; and (iii) for deciding the question purely from the point of view of the complainant without at all adverting to any defence that the accused may have."
+        }
+      ]
+    },
+    {
+      "id": "E22",
+      "split": "test",
+      "category": "defamation IPC 499",
+      "top_rerank": 4.9735,
+      "retrieved": [
+        "118653996",
+        "140170613",
+        "140170613",
+        "154440315",
+        "1938562",
+        "114799567"
+      ],
+      "context_precision": 1.0,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 7,
+      "off_unsupported_shown": 5,
+      "off_lint_drops": 4,
+      "on_shown": 2,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 3,
+      "precedent_status": {
+        "passed": 1,
+        "weak": 0,
+        "failed": 2,
+        "unverified": 0
+      },
+      "good_law_with_results": 1,
+      "good_law_searched": 1,
+      "latency_s": 45.8,
+      "tokens": 22245,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P1",
+          "text": "Prosecution must prove a guilty mind; lack of intent to harm reputation defeats a defamation charge.",
+          "case_id": "140170613",
+          "title": "Standard Chartered Bank vs Vinay Kumar Sood & Ors. on 6 February, 2009",
+          "quote": "If mens rea or criminal intention is lacking or is missing in the act of the accused, he cannot be held guilty for an offence of defamation within the meaning of Section 499 IPC.",
+          "judge_quote": "Thus, it is clear that intention to cause harm is the most essential sine qua non for an offence under Section 499 IPC. An offence punishable under Section 500 IPC requires blameworthy mind and is not a statutory offence requiring no mens rea."
+        }
+      ]
+    },
+    {
+      "id": "E23",
+      "split": "test",
+      "category": "corporate fraud companies act",
+      "top_rerank": 0.3252,
+      "retrieved": [
+        "2922069",
+        "184135932",
+        "24070355",
+        "57407513",
+        "57407513",
+        "184135932"
+      ],
+      "context_precision": 0.7100000000000001,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 6,
+      "off_unsupported_shown": 5,
+      "off_lint_drops": 3,
+      "on_shown": 1,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 2,
+      "precedent_status": {
+        "passed": 0,
+        "weak": 0,
+        "failed": 2,
+        "unverified": 0
+      },
+      "good_law_with_results": 0,
+      "good_law_searched": 0,
+      "latency_s": 37.0,
+      "tokens": 22795,
+      "failed_llm_calls": 0,
+      "passed_precedents": []
+    },
+    {
+      "id": "E24",
+      "split": "test",
+      "category": "corporate fraud companies act",
+      "top_rerank": 0.2222,
+      "retrieved": [
+        "191602608",
+        "91441688",
+        "5286035",
+        "184135932",
+        "82449802",
+        "5286035"
+      ],
+      "context_precision": 0.5,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 7,
+      "off_unsupported_shown": 7,
+      "off_lint_drops": 5,
+      "on_shown": 0,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 2,
+      "precedent_status": {
+        "passed": 0,
+        "weak": 0,
+        "failed": 1,
+        "unverified": 1
+      },
+      "good_law_with_results": 0,
+      "good_law_searched": 0,
+      "latency_s": 36.5,
+      "tokens": 18964,
+      "failed_llm_calls": 0,
+      "passed_precedents": []
+    },
+    {
+      "id": "E25",
+      "split": "dev",
+      "category": "SEBI insider trading",
+      "top_rerank": -4.0271,
+      "retrieved": [
+        "1346432",
+        "71549161",
+        "194078395",
+        "33248070",
+        "295985",
+        "1346432"
+      ],
+      "context_precision": 1.0,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 9,
+      "off_unsupported_shown": 5,
+      "off_lint_drops": 5,
+      "on_shown": 4,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 4,
+      "precedent_status": {
+        "passed": 2,
+        "weak": 0,
+        "failed": 1,
+        "unverified": 1
+      },
+      "good_law_with_results": 2,
+      "good_law_searched": 2,
+      "latency_s": 58.8,
+      "tokens": 34614,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P1",
+          "text": "Excessive delay in initiating enforcement proceedings can justify setting aside the resulting orders.",
+          "case_id": "71549161",
+          "title": "Yatendra Kumar vs Sebi on 6 August, 2025",
+          "quote": "Admittedly, the SCNs were issued after a lapse of more than 9 years on 5th September, 2022 and 15th September, 2022 and after 8 years of the issuance of the summons and, therefore, the said impugned orders should be quashed on this ground itself on account of 6 inordinate delay.",
+          "judge_quote": "Having heard the learned counsel for the parties, we are of the opinion that the appeal is liable to be allowed on the short ground of inordinate delay in the initiation of the proceedings."
+        },
+        {
+          "claim_id": "P3",
+          "text": "Absence of any proven misuse of confidential information by connected persons indicates that no insider trading occurred.",
+          "case_id": "33248070",
+          "title": "Piramal Enterprises Limited vs Sebi on 15 May, 2019",
+          "quote": "Apart from the aforesaid instance, the AO has not found any other instance where the UPSI was misused by any employee of PEL, outsider, directors of the PEL, or the individuals who were identified to sell the domestic healthcare business.",
+          "judge_quote": "In the absence of any direct or clinching evidence of insider trading or misuse of UPSI, a reasonable benefit of doubt should be extended to the PEL instead of mechanically imposing a penalty."
+        }
+      ]
+    },
+    {
+      "id": "E26",
+      "split": "dev",
+      "category": "SEBI insider trading",
+      "top_rerank": -5.9635,
+      "retrieved": [
+        "853310",
+        "853310",
+        "853310",
+        "853310",
+        "1346432",
+        "853310"
+      ],
+      "context_precision": 1.0,
+      "any_relevant_retrieved": true,
+      "abstained": false,
+      "fake_injected_caught_on": true,
+      "fake_injected_shown_off": true,
+      "off_shown": 8,
+      "off_unsupported_shown": 6,
+      "off_lint_drops": 5,
+      "on_shown": 2,
+      "on_unsupported_shown": 0,
+      "on_lint_drops": 0,
+      "final_leaks": 0,
+      "leak_examples": [],
+      "precedents_drafted": 4,
+      "precedent_status": {
+        "passed": 2,
+        "weak": 0,
+        "failed": 1,
+        "unverified": 1
+      },
+      "good_law_with_results": 0,
+      "good_law_searched": 1,
+      "latency_s": 60.7,
+      "tokens": 34011,
+      "failed_llm_calls": 0,
+      "passed_precedents": [
+        {
+          "claim_id": "P1",
+          "text": "To be classified as an insider under the regulations, a person must be connected (or deemed connected) to the company and reasonably expected to have access to unpublished price sensitive information, or must have actually received such information.",
+          "case_id": "853310",
+          "title": "In Re: Shri D.S. Pendse And Ors.; In Re: ... vs Unknown on 11 January, 2008",
+          "quote": "'insider' means any person who, is or was connected with the company or is deemed to have connected with the company, and who is reasonably expected to have access, by virtue of such connection, to unpublished price sensitive information in respect of securities of the company, or who has received or has received or has had access to such unpublished price sensitive information.",
+          "judge_quote": "Thus for being an \"insider\", a person needs to be either \"connected\" or \"deemed to be connected\" and by virtue of such connection is reasonably expected to have access to unpublished price sensitive information or should have access to unpublished price sensitive information or should have received the unpublished price sensitive information."
+        },
+        {
+          "claim_id": "P4",
+          "text": "The insider trading regulations prohibit an insider from dealing, communicating, or counseling based on unpublished price sensitive information, except where such communication is required in the ordinary course of business or by law.",
+          "case_id": "853310",
+          "title": "In Re: Shri D.S. Pendse And Ors.; In Re: ... vs Unknown on 11 January, 2008",
+          "quote": "3. Prohibition on dealing, communication or counseling on matters relating to insider trading - No insider shall - i. either on his own behalf, or on behalf of any other person, deal in securities of a company listed on any stock exchange on the basis of any unpublished price sensitive information; ii. or (ii) communicate any unpublished price sensitive information to any person, with or without his request for such information, except as required in the ordinary course of business or under any law; iii. or (iii) counsel or procure any other person to deal in securities of any company on the basis of unpublished price sensitive information.",
+          "judge_quote": "Regulation 3 of the Insider Regulations reads as under- 3. Prohibition on dealing, communication or counseling on matters relating to insider trading - No insider shall - i. either on his own behalf, or on behalf of any other person, deal in securities of a company listed on any stock exchange on the basis of any unpublished price sensitive information; ii. or (ii) communicate any unpublished price sensitive information to any person, with or without his request for such information, except as required in the ordinary course of business or under any law; iii. or (iii) counsel or procure any other person to deal in securities of any company on the basis of unpublished price sensitive information."
+        }
+      ]
+    }
+  ],
+  "audit": [
+    {
+      "id": "E01",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E02",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E03",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E04",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E05",
+      "real_extracted": false,
+      "real_resolved": false,
+      "real_verdict": null,
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E06",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E07",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "unverified",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E08",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E09",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "unverified",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E10",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E11",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "unverified",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E12",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E13",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E14",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "unverified",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E15",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E16",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E17",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "unverified",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E18",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E19",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E20",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E21",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E22",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E23",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E24",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E25",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    },
+    {
+      "id": "E26",
+      "real_extracted": true,
+      "real_resolved": true,
+      "real_verdict": "not_supported",
+      "fake_extracted": true,
+      "fake_verdict": "not_found",
+      "fake_caught": true
+    }
+  ]
+}

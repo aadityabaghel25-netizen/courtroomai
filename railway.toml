@@ -1,0 +1,10 @@
+[build]
+builder = "dockerfile"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+# Same as the Dockerfile CMD: fetch the data archive on first start, then serve.
+startCommand = "sh -c 'sh scripts/fetch_data.sh && uvicorn backend.main:app --host 0.0.0.0 --port ${PORT:-8000}'"
+healthcheckPath = "/api/health"
+healthcheckTimeout = 600
+restartPolicyType = "on_failure"

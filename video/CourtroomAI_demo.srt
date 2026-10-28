@@ -1,0 +1,51 @@
+1
+00:00:00,000 --> 00:00:05,527
+This is CourtroomAI: case research for Indian advocates that you can check, line by line.
+
+2
+00:00:05,827 --> 00:00:17,978
+AI research tools are fast, but they can invent case law. A case name that sounds real. A citation that looks real. A quote no judge ever wrote. In court, one fake citation can hurt the client, and the advocate.
+
+3
+00:00:18,278 --> 00:00:26,280
+And since July 2024, India's criminal codes have new section numbers. Which code applies depends on the date of the offence.
+
+4
+00:00:26,580 --> 00:00:37,347
+So we flipped the approach. The AI may only propose points, each naming its source. Code checks every point. Only what passes reaches the brief, and everything else is listed with the reason.
+
+5
+00:00:37,647 --> 00:00:40,347
+Let's see it in the real app.
+
+6
+00:00:40,647 --> 00:00:46,334
+Here is a sample FIR about dowry harassment, with fictional people. We act for the defence.
+
+7
+00:00:46,634 --> 00:01:03,712
+Watch it work. Nemotron Nano reads the FIR. Sections are matched to the new codes from the official table. We search our judgment library. Nemotron Super drafts the points, and Nemotron Ultra, the largest model, reviews every judgment. All of it runs on Nebius Token Factory.
+
+8
+00:01:04,012 --> 00:01:23,339
+Every fact is quoted word for word from the FIR. Hover over one, and it lights up. Sections show their new-law equivalents. Each judgment shows the exact paragraph, matched word for word, with a link to the full text. Later cases come from a live Tavily search. And anything that failed a check is listed, with the reason. Nothing is hidden.
+
+9
+00:01:23,639 --> 00:01:27,797
+One click gives a clean PDF report, with every source and link.
+
+10
+00:01:28,097 --> 00:01:34,048
+Now, checking someone else's draft. Paste any draft, even one written by another AI tool.
+
+11
+00:01:34,347 --> 00:01:49,626
+A real case, cited correctly, is verified. The same case, cited for something it never said, is flagged. A case that is not in our library? We fetch the full judgment with Tavily, and check it the same way. And a citation that does not exist anywhere, is caught.
+
+12
+00:01:49,926 --> 00:02:04,893
+We tested this on 26 practice cases, each with a fake judgment planted in it. It was caught 26 times out of 26. With the checks switched off, 53 percent of the drafted points would not have held up, and none of them reached the final brief.
+
+13
+00:02:05,193 --> 00:02:13,362
+CourtroomAI. Built on NVIDIA Nemotron, Nebius Token Factory, and Tavily. Every sentence, checked against the source.

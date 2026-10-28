@@ -1,0 +1,58 @@
+# Secrets
+.env
+.env.*
+!.env.example
+!.env.production
+!frontend/.env.production
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# macOS
+.DS_Store
+
+# Node
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# IDE
+.vscode/
+.idea/
+
+# Scratch scripts
+scratch_*.py
+# Data and vector store: never committed (see docs/DATA.md)
+data/chroma_db/
+data/raw/
+data/judgments/
+
+# Runtime logs
+logs/
+runs/
+
+# Downloaded Act texts (Indian Kanoon) and derived files
+data/statutes/acts/
+data/statutes/sections.jsonl
+data/statutes/ik_crossref.csv
+data/statutes/ipc_bns_map.csv
+
+# Video build artefacts
+video/frames/
+video/downloads/
+video/build/
+video/voice_samples/
+
+# Deployment artefacts
+dist/
+
+# Internal notes, not published
+docs/RECON.md
+frontend/.env.production
+docs/COMPLIANCE.md
+docs/STATUS.md
+docs/DEVPOST.md
