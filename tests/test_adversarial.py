@@ -140,6 +140,8 @@ def test_extract_falls_back_to_super_after_bad_json_but_judge_does_not():
         x: int
 
     llm = TokenFactoryLLM(client=_FakeClient(["{bad", "{still bad", '{"x": 1}']))
+    # CI has no .env: give the roles distinct model names so the fallback route is real.
+    llm.models.update({"extract": "nano-test", "draft": "super-test", "judge": "ultra-test"})
     out = llm.structured("extract", [{"role": "user", "content": "q"}], Out)
     assert out["value"].x == 1 and "->" in out["fallback"]
     judge_llm = TokenFactoryLLM(client=_FakeClient(["{bad", "{still bad", '{"x": 1}']))
