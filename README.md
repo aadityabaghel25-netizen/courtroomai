@@ -6,7 +6,7 @@ CourtroomAI turns an FIR into a case brief in which **every sentence traces to a
 
 Built for the Nebius x NVIDIA Global AI Hackathon, Best Apps and Agents track.
 
-**Live demo:** https://courtroomai-khaki.vercel.app (API hosted on AWS EC2; first brief takes about a minute)
+**Live demo:** https://courtroomai-khaki.vercel.app (API hosted on AWS EC2; first brief takes about a minute) · **Video (2:34):** https://youtu.be/bGUjpII-oVE
 
 <!-- SCREENSHOT: brief view with badges and an expanded source passage -->
 <!-- SCREENSHOT: audit view catching a fabricated citation -->
