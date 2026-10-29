@@ -1,6 +1,8 @@
 #!/bin/bash
 # One-command deploy of the CourtroomAI API on a fresh Ubuntu 24.04 EC2 instance:
 #   curl -fsSL https://raw.githubusercontent.com/aadityabaghel25-netizen/courtroomai/main/deploy/aws/setup.sh | sudo bash
+# With your own domain (recommended; some networks block sslip.io):
+#   curl -fsSL .../setup.sh | sudo API_HOST=yourname.duckdns.org bash
 # Installs Docker, builds the API image from this repo, downloads the data release, and serves it
 # over HTTPS at https://<public-ip-with-dashes>.sslip.io (Caddy, free Let's Encrypt certificate).
 # Asks for the two API keys once (input hidden) and stores them in /opt/courtroomai/app.env (root only).
@@ -56,7 +58,8 @@ docker build -q -t courtroomai-api $APP/src > /dev/null
 
 IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H "X-aws-ec2-metadata-token-ttl-seconds: 60")
 PUBLIC_IP=$(curl -s -H "X-aws-ec2-metadata-token: $IMDS_TOKEN" http://169.254.169.254/latest/meta-data/public-ipv4)
-HOST="${PUBLIC_IP//./-}.sslip.io"
+# API_HOST: a domain pointing at this server (e.g. a free DuckDNS name). Some networks block sslip.io.
+HOST="${API_HOST:-${PUBLIC_IP//./-}.sslip.io}"
 
 say "Starting the API and HTTPS proxy"
 docker rm -f courtroomai-api caddy > /dev/null 2>&1 || true
